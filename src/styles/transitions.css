@@ -1,0 +1,175 @@
+/* ==========================================================================
+   MEDDY GLOBAL SOLUTIONS — CINEMATIC PAGE TRANSITIONS & GLASS-BLUR SYSTEM
+   Premium, restrained, industrial. Smooth, not flashy.
+   ========================================================================== */
+
+:root {
+  /* Cinematic Transition & Glass Tokens */
+  --transition-navy-start: #06121F;
+  --transition-navy-end: #0B2239;
+  --transition-cyan: #0EA5E0;
+  --transition-ice: #EAF6FD;
+  --transition-text-dark: #F2F8FC;
+  --transition-text-light: #06121F;
+  --ease-cinematic-in: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-cinematic-curtain: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-cinematic-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Zero Flash of Unstyled Content: Instant cover on first paint of destination page */
+html[data-transition-theme="ice"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: #EAF6FD;
+  z-index: 89;
+  pointer-events: none;
+}
+
+/* Glass Header Scrolled State */
+.glass-header-scrolled {
+  background: rgba(6, 18, 31, 0.65) !important;
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Velocity Blur Target on Main Content */
+.velocity-blur-target {
+  will-change: filter;
+  transition: filter 200ms ease-out;
+}
+
+/* Blur-to-Sharp Section Reveal */
+.scroll-reveal {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(28px);
+  transition: opacity 700ms var(--ease-cinematic-reveal),
+              filter 700ms var(--ease-cinematic-reveal),
+              transform 700ms var(--ease-cinematic-reveal);
+  will-change: opacity, filter, transform;
+}
+
+@media (max-width: 1024px) {
+  .scroll-reveal {
+    filter: blur(8px);
+    transform: translateY(18px);
+    transition: opacity 550ms var(--ease-cinematic-reveal),
+                filter 550ms var(--ease-cinematic-reveal),
+                transform 550ms var(--ease-cinematic-reveal);
+  }
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0px);
+}
+
+/* Stagger delays for sibling cards */
+.scroll-reveal-stagger-1 { transition-delay: 90ms; }
+.scroll-reveal-stagger-2 { transition-delay: 180ms; }
+.scroll-reveal-stagger-3 { transition-delay: 270ms; }
+.scroll-reveal-stagger-4 { transition-delay: 360ms; }
+.scroll-reveal-stagger-5 { transition-delay: 450ms; }
+.scroll-reveal-stagger-6 { transition-delay: 540ms; }
+
+/* Subtle Glassmorphism Card Treatment on Hover (Services, Values, Capabilities, CTA) */
+main .group.rounded-2xl,
+main .group.rounded-3xl,
+main article.rounded-2xl,
+main article.rounded-3xl,
+main .bg-white.rounded-2xl,
+main .bg-white.rounded-3xl,
+.glass-card-interactive {
+  transition: transform 300ms var(--ease-cinematic-reveal),
+              box-shadow 300ms var(--ease-cinematic-reveal),
+              border-color 300ms var(--ease-cinematic-reveal),
+              backdrop-filter 300ms var(--ease-cinematic-reveal);
+}
+
+main .group.rounded-2xl:hover,
+main .group.rounded-3xl:hover,
+main article.rounded-2xl:hover,
+main article.rounded-3xl:hover,
+main .bg-white.rounded-2xl:hover,
+main .bg-white.rounded-3xl:hover,
+.glass-card-interactive:hover {
+  transform: translateY(-4px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 16px 36px -8px rgba(14, 165, 224, 0.22),
+              0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+/* Light-section cards readability */
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(228, 237, 242, 0.8);
+}
+
+.glass-card-light:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-4px);
+  border-color: rgba(14, 165, 224, 0.35);
+  box-shadow: 0 16px 32px -10px rgba(14, 165, 224, 0.15);
+}
+
+/* Transition Curtain Clip Paths */
+.curtain-center-closed {
+  clip-path: inset(50% 0 50% 0);
+}
+
+.curtain-center-open {
+  clip-path: inset(0% 0 0% 0);
+}
+
+.curtain-lift-out {
+  transform: translateY(-100%) !important;
+  transition: transform 450ms cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+/* Popstate Reverse Fade Animation */
+@keyframes popstateFade {
+  0% { opacity: 0; }
+  35% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-popstateFade {
+  animation: popstateFade 950ms ease-in-out forwards;
+}
+
+/* Scroll Lock */
+body.transition-scroll-locked {
+  overflow: hidden !important;
+  touch-action: none !important;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .velocity-blur-target {
+    filter: none !important;
+    transition: none !important;
+  }
+  main .group.rounded-2xl:hover,
+  main .group.rounded-3xl:hover,
+  main article.rounded-2xl:hover,
+  main article.rounded-3xl:hover,
+  main .bg-white.rounded-2xl:hover,
+  main .bg-white.rounded-3xl:hover,
+  .glass-card-interactive:hover {
+    transform: none !important;
+  }
+}

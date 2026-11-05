@@ -1,0 +1,138 @@
+/* ==========================================================================
+   MEDDY GLOBAL SOLUTIONS — CINEMATIC PRELOADER STYLES
+   Critical, hardware-accelerated, zero-flash preloader overlay & animations
+   ========================================================================== */
+
+:root {
+  --preloader-navy: #06121F;
+  --preloader-cyan: #0EA5E0;
+  --ease-preloader-exit: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Scroll lock while preloader is active */
+body.preloader-scroll-locked {
+  overflow: hidden !important;
+  touch-action: none !important;
+}
+
+/* Preloader Base Overlay */
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: var(--preloader-navy);
+  background-image: url("/media/intro-poster.webp");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video Frame Container */
+.preloader-video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
+}
+
+/* Preloader Video */
+.preloader-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Fallback / Final Frame Poster Layer */
+.preloader-last-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/media/intro-last-frame.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-out;
+}
+
+.preloader-last-frame.is-visible {
+  opacity: 1;
+}
+
+/* Exit Animation Choreography:
+   Scales content from 1 to 1.35 toward logo center,
+   fades opacity to 0, and blurs from 0 to 12px over 900ms. */
+.preloader-exiting .preloader-video-container {
+  transform: scale(1.35);
+  opacity: 0;
+  filter: blur(12px);
+  transition: transform 900ms var(--ease-preloader-exit),
+              opacity 900ms var(--ease-preloader-exit),
+              filter 900ms var(--ease-preloader-exit);
+}
+
+.preloader-exiting {
+  pointer-events: none;
+  transition: background-color 900ms var(--ease-preloader-exit);
+  background-color: transparent !important;
+}
+
+/* Subtle Skip Button */
+.preloader-skip-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2.5rem;
+  z-index: 210;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(6, 18, 31, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 400ms ease, transform 400ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.preloader-skip-btn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.preloader-skip-btn:hover,
+.preloader-skip-btn:focus-visible {
+  color: #0EA5E0;
+  border-color: rgba(14, 165, 224, 0.5);
+  outline: none;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .preloader-video {
+    display: none !important;
+  }
+  .preloader-video-container {
+    transform: none !important;
+    filter: none !important;
+    transition: opacity 400ms ease !important;
+  }
+}
+

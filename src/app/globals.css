@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  /* MEDDY Brand System Tokens */
+  --meddy-blue: #0CA3DC;
+  --meddy-blue-deep: #087FB5;
+  --meddy-blue-light: #CBEBFA;
+  --meddy-charcoal: #292D32;
+  --meddy-ink: #20262B;
+  --meddy-white: #FFFFFF;
+  --meddy-off-white: #F5FAFC;
+  --meddy-border: #E4EDF2;
+  --meddy-muted: #64727C;
+
+  --background: #FFFFFF;
+  --foreground: #20262B;
+
+  /* Global easing curve specified in Appendix C */
+  --ease-meddy: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme {
+  --color-meddy-blue: var(--meddy-blue);
+  --color-meddy-blue-deep: var(--meddy-blue-deep);
+  --color-meddy-blue-light: var(--meddy-blue-light);
+  --color-meddy-charcoal: var(--meddy-charcoal);
+  --color-meddy-ink: var(--meddy-ink);
+  --color-meddy-white: var(--meddy-white);
+  --color-meddy-off-white: var(--meddy-off-white);
+  --color-meddy-border: var(--meddy-border);
+  --color-meddy-muted: var(--meddy-muted);
+
+  --font-heading: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom focus styles for WCAG 2.2 AA accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--meddy-blue);
+  outline-offset: 2px;
+}
+
+/* Prevent programmatic or browser focus outlines on headings across desktop, tablet, and mobile */
+h1,
+h1:focus,
+h1:focus-visible,
+h2,
+h2:focus,
+h2:focus-visible,
+h3,
+h3:focus,
+h3:focus-visible,
+h4:focus,
+[tabindex="-1"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Tactile zoom-in effect on button tap / click */
+button,
+[role="button"],
+a.inline-flex,
+a.rounded-full {
+  transition: transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 220ms ease !important;
+}
+
+button:hover,
+[role="button"]:hover,
+a.inline-flex:hover,
+a.rounded-full:hover {
+  transform: scale(1.025);
+}
+
+button:active,
+[role="button"]:active,
+a.inline-flex:active,
+a.rounded-full:active {
+  transform: scale(0.95) !important;
+  transition-duration: 90ms !important;
+}
+
+/* Revealed content smooth zoom-in animation */
+@keyframes revealZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.97) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-zoom-reveal {
+  animation: revealZoomIn 420ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom image corner treatments matching reference */
+.reference-card-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Stagger offset classes for desktop services card grid */
+@media (min-width: 1024px) {
+  .stagger-col-1 {
+    transform: translateY(0px);
+  }
+  .stagger-col-2 {
+    transform: translateY(32px);
+  }
+  .stagger-col-3 {
+    transform: translateY(64px);
+  }
+}
