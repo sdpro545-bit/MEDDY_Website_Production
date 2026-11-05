@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 export function ContactForm() {

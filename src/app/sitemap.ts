@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.meddyglobalsolutions.com";

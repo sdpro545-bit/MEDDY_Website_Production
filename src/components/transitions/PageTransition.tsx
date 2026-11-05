@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 
 export const ROUTE_TITLE_MAP: Record<string, string> = {
   "/": "Home",

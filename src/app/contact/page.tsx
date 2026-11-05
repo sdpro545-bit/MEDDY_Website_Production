@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { MapPin, Mail, ArrowUpRight, ShieldCheck, Clock } from "lucide-react";
 

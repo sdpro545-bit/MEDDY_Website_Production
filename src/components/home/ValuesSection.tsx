@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { Shield, MessageSquare, Award, ClockCheck, ArrowRight } from "lucide-react";
 
 export function ValuesSection() {

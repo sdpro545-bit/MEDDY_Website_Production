@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { CountUpNumber } from "@/components/common/CountUpNumber";
 import { Shield, CheckCircle2, Leaf, FileCheck, ArrowRight } from "lucide-react";
 

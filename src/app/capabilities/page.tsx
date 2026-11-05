@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { siteContent, ServiceItem } from "@/../content/siteContent";
+import { siteContent, ServiceItem } from "@/content/siteContent";
 import { CountUpNumber } from "@/components/common/CountUpNumber";
 import {
   ArrowRight,

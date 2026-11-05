@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { CountUpNumber } from "@/components/common/CountUpNumber";
 import { ArrowRight, Wrench, PackageCheck } from "lucide-react";
 

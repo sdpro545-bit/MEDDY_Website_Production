@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { HeroVideoBackground } from "@/components/home/HeroVideoBackground";
 

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { siteContent, ServiceItem } from "@/../content/siteContent";
+import { siteContent, ServiceItem } from "@/content/siteContent";
 import { ArrowRight, ChevronRight, CheckCircle2, Shield, Wrench, FileText } from "lucide-react";
 
 interface Props {

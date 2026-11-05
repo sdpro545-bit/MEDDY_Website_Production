@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { siteContent } from "@/../content/siteContent";
+import { siteContent } from "@/content/siteContent";
 import { ArrowRight, Mail } from "lucide-react";
 
 export function CtaBand() {

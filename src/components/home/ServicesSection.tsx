@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { siteContent, SHOW_DRAFT_SERVICES } from "@/../content/siteContent";
+import { siteContent, SHOW_DRAFT_SERVICES } from "@/content/siteContent";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export function ServicesSection() {
