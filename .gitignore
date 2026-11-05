@@ -34,7 +34,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# test screenshots and temporary files
+# test screenshots, scratch scripts and temporary archives
 *.png
 *.py
-Media.zip
+*.zip
