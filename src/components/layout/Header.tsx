@@ -202,48 +202,64 @@ export function Header() {
         </div>
       </nav>
 
-      {/* Animated Mobile Drawer Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[64px] bottom-0 h-[calc(100dvh-64px)] bg-[#06121F]/98 backdrop-blur-2xl z-40 flex flex-col p-6 overflow-y-auto animate-in fade-in slide-in-from-top-4 duration-300 ease-out">
-          <div className="flex flex-col gap-2.5 pt-4 flex-1">
-            {siteContent.navigation.map((item, idx) => {
-              const active = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-semibold py-3 px-4 rounded-xl transition-all duration-200 active:scale-[0.97] flex items-center justify-between ${
-                    active
-                      ? "bg-[#0EA5E0]/15 text-[#0EA5E0] border border-[#0EA5E0]/20"
-                      : "text-white/90 hover:text-white hover:bg-white/5"
-                  }`}
-                >
-                  <span>{item.label}</span>
-                  <ArrowRight className="w-4 h-4 opacity-50" />
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="pt-6 pb-4 border-t border-white/10 flex flex-col gap-4 mt-auto">
-            <div className="text-xs text-white/65 space-y-1">
-              <p className="font-semibold text-white/90">{siteContent.company.legalName}</p>
-              <p>{siteContent.company.address.formatted}</p>
-              <a href={`mailto:${siteContent.company.email}`} className="text-[#0EA5E0] block mt-1 font-medium">
-                {siteContent.company.email}
-              </a>
-            </div>
-            <Link
-              href="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-3.5 rounded-full bg-[#0EA5E0] hover:bg-[#087FB5] active:scale-[0.97] text-white font-semibold text-sm transition-all shadow-[0_0_20px_rgba(14,165,224,0.35)]"
-            >
-              Request a Quote
-            </Link>
-          </div>
+      {/* Animated Mobile Drawer Navigation with Slide Down/Up Physics */}
+      <div
+        className={`md:hidden fixed inset-x-0 top-[64px] bottom-0 h-[calc(100dvh-64px)] bg-[#06121F]/98 backdrop-blur-2xl z-40 flex flex-col p-6 overflow-y-auto transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          mobileMenuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto visible"
+            : "opacity-0 -translate-y-8 pointer-events-none invisible"
+        }`}
+        aria-hidden={!mobileMenuOpen}
+      >
+        <div className="flex flex-col gap-2.5 pt-4 flex-1">
+          {siteContent.navigation.map((item, idx) => {
+            const active = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-semibold py-3 px-4 rounded-xl transition-all duration-300 active:scale-[0.97] flex items-center justify-between ${
+                  active
+                    ? "bg-[#0EA5E0]/15 text-[#0EA5E0] border border-[#0EA5E0]/20"
+                    : "text-white/90 hover:text-white hover:bg-white/5"
+                } ${
+                  mobileMenuOpen
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-4 opacity-0"
+                }`}
+                style={{
+                  transitionDelay: mobileMenuOpen ? `${idx * 45 + 50}ms` : "0ms",
+                }}
+              >
+                <span>{item.label}</span>
+                <ArrowRight className="w-4 h-4 opacity-50" />
+              </Link>
+            );
+          })}
         </div>
-      )}
+
+        <div
+          className={`pt-6 pb-4 border-t border-white/10 flex flex-col gap-4 mt-auto transition-all duration-350 ${
+            mobileMenuOpen ? "translate-y-0 opacity-100 delay-200" : "-translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="text-xs text-white/65 space-y-1">
+            <p className="font-semibold text-white/90">{siteContent.company.legalName}</p>
+            <p>{siteContent.company.address.formatted}</p>
+            <a href={`mailto:${siteContent.company.email}`} className="text-[#0EA5E0] block mt-1 font-medium">
+              {siteContent.company.email}
+            </a>
+          </div>
+          <Link
+            href="/contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full text-center py-3.5 rounded-full bg-[#0EA5E0] hover:bg-[#087FB5] active:scale-[0.97] text-white font-semibold text-sm transition-all shadow-[0_0_20px_rgba(14,165,224,0.35)]"
+          >
+            Request a Quote
+          </Link>
+        </div>
+      </div>
     </header>
   );
 }

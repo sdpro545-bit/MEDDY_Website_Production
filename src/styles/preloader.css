@@ -21,9 +21,9 @@ body.preloader-scroll-locked {
   inset: 0;
   z-index: 200;
   background-color: var(--preloader-navy);
-  background-image: url("/media/intro-poster.webp");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -42,6 +42,7 @@ body.preloader-scroll-locked {
   justify-content: center;
   transform-origin: center center;
   will-change: transform, opacity, filter;
+  background-color: #06121F;
 }
 
 /* Preloader Video */
@@ -49,8 +50,9 @@ body.preloader-scroll-locked {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   display: block;
+  background-color: #06121F;
 }
 
 /* Fallback / Final Frame Poster Layer */
@@ -59,9 +61,9 @@ body.preloader-scroll-locked {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/media/intro-last-frame.webp");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-color: #06121F;
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms ease-out;
@@ -89,19 +91,19 @@ body.preloader-scroll-locked {
   background-color: transparent !important;
 }
 
-/* Subtle Skip Button */
+/* Subtle Skip Button with 24px clearance above safe area */
 .preloader-skip-btn {
   position: absolute;
-  bottom: 2rem;
-  right: 2.5rem;
+  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px) + 24px);
+  right: calc(1.5rem + env(safe-area-inset-right, 0px));
   z-index: 210;
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
-  background: rgba(6, 18, 31, 0.4);
+  background: rgba(6, 18, 31, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -135,4 +137,3 @@ body.preloader-scroll-locked {
     transition: opacity 400ms ease !important;
   }
 }
-

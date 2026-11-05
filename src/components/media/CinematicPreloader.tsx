@@ -3,6 +3,19 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
+// Media Asset Constants
+const MEDIA_DESKTOP = {
+  video: "/media/intro-1080.mp4",
+  poster: "/media/intro-poster.webp",
+  lastFrame: "/media/intro-last-frame.webp",
+};
+
+const MEDIA_MOBILE = {
+  video: "/media/intro-mobile.mp4",
+  poster: "/media/intro-mobile-poster.webp",
+  lastFrame: "/media/intro-mobile-last-frame.webp",
+};
+
 export function CinematicPreloader() {
   const pathname = usePathname();
   const [isActive, setIsActive] = useState(true);
@@ -10,11 +23,43 @@ export function CinematicPreloader() {
   const [showLastFrame, setShowLastFrame] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
   const [needsUserTap, setNeedsUserTap] = useState(false);
-  const [videoSrc, setVideoSrc] = useState<string>("/media/intro-1080.mp4");
+
+  // Initial source and still selection decided synchronously in JS before setting src and poster
+  const [videoSrc, setVideoSrc] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(max-width: 768px), (orientation: portrait)").matches
+        ? MEDIA_MOBILE.video
+        : MEDIA_DESKTOP.video;
+    }
+    return MEDIA_DESKTOP.video;
+  });
+  const [posterSrc, setPosterSrc] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(max-width: 768px), (orientation: portrait)").matches
+        ? MEDIA_MOBILE.poster
+        : MEDIA_DESKTOP.poster;
+    }
+    return MEDIA_DESKTOP.poster;
+  });
+  const [lastFrameSrc, setLastFrameSrc] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(max-width: 768px), (orientation: portrait)").matches
+        ? MEDIA_MOBILE.lastFrame
+        : MEDIA_DESKTOP.lastFrame;
+    }
+    return MEDIA_DESKTOP.lastFrame;
+  });
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasTriggeredExitRef = useRef(false);
   const exitTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const isVideoLoadedRef = useRef(false);
+
+  // Helper: check if viewport is <= 768px OR in portrait orientation
+  const isPortraitOrMobile = useCallback(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(max-width: 768px), (orientation: portrait)").matches;
+  }, []);
 
   // Focus transfer to main heading on exit
   const transferFocus = useCallback(() => {
@@ -40,6 +85,10 @@ export function CinematicPreloader() {
     if (hasTriggeredExitRef.current) return;
     hasTriggeredExitRef.current = true;
 
+    // Use the correct still for current orientation at exit
+    const portraitNow = isPortraitOrMobile();
+    const finalStill = portraitNow ? MEDIA_MOBILE.lastFrame : MEDIA_DESKTOP.lastFrame;
+    setLastFrameSrc(finalStill);
     setShowLastFrame(true);
 
     if (videoRef.current) {
@@ -71,7 +120,7 @@ export function CinematicPreloader() {
         }
       }, 900);
     }, 450);
-  }, [transferFocus]);
+  }, [isPortraitOrMobile, transferFocus]);
 
   // Attempt playback with error and policy recovery
   const attemptPlay = useCallback(() => {
@@ -90,7 +139,7 @@ export function CinematicPreloader() {
           window.dispatchEvent(new CustomEvent("meddy-preload-hero-video"));
         })
         .catch(() => {
-          // If browser policy blocks unmuted/gestureless autoplay, show gentle tap prompt
+          // Autoplay blocked by browser policy: show gentle tap prompt
           setNeedsUserTap(true);
         });
     }
@@ -104,20 +153,12 @@ export function CinematicPreloader() {
     }
   };
 
-  // Device detection & Source Selection
+  // Initialization, Source Selection, and Constraints Check
   useEffect(() => {
     if (pathname !== "/") {
       setIsActive(false);
       return;
     }
-
-    const isMobile = window.innerWidth <= 768;
-    setVideoSrc(isMobile ? "/media/intro-720.mp4" : "/media/intro-1080.mp4");
-  }, [pathname]);
-
-  // Playback initialization
-  useEffect(() => {
-    if (pathname !== "/") return;
 
     // Check if this was an internal SPA link navigation from another page within the same session
     try {
@@ -131,14 +172,44 @@ export function CinematicPreloader() {
       }
     } catch {}
 
+    // Decide mobile vs desktop in JS BEFORE setting src and poster
+    const isPortrait = isPortraitOrMobile();
+    const activeMedia = isPortrait ? MEDIA_MOBILE : MEDIA_DESKTOP;
+
+    setVideoSrc(activeMedia.video);
+    setPosterSrc(activeMedia.poster);
+    setLastFrameSrc(activeMedia.lastFrame);
+
+    // Check low-bandwidth / low-power / reduced-motion constraints
+    const nav = navigator as unknown as { connection?: { saveData?: boolean; effectiveType?: string } };
+    const isSaveData = nav.connection?.saveData === true;
+    const isSlowNetwork = nav.connection?.effectiveType === "2g" || nav.connection?.effectiveType === "slow-2g";
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (isSaveData || isSlowNetwork || prefersReducedMotion) {
+      // Still fallback: display the matching last frame immediately, then exit
+      document.body.classList.add("preloader-scroll-locked");
+      setShowLastFrame(true);
+      window.dispatchEvent(new CustomEvent("meddy-preload-hero-video"));
+      setTimeout(() => {
+        triggerExit();
+      }, 800);
+      return;
+    }
+
     // Lock body scroll during preloader
     document.body.classList.add("preloader-scroll-locked");
 
     const video = videoRef.current;
-    if (video) {
+    if (video && !isVideoLoadedRef.current) {
+      isVideoLoadedRef.current = true;
       video.muted = true;
       video.defaultMuted = true;
       video.playsInline = true;
+
+      // Assign decided src and load
+      video.src = activeMedia.video;
+      video.load();
 
       const handleCanPlay = () => {
         attemptPlay();
@@ -149,6 +220,15 @@ export function CinematicPreloader() {
 
       attemptPlay();
     }
+
+    // Orientation / Resize listener: update lastFrameSrc on orientation change without restarting video
+    const handleOrientationOrResize = () => {
+      const portraitNow = isPortraitOrMobile();
+      setLastFrameSrc(portraitNow ? MEDIA_MOBILE.lastFrame : MEDIA_DESKTOP.lastFrame);
+    };
+
+    window.addEventListener("resize", handleOrientationOrResize, { passive: true });
+    window.addEventListener("orientationchange", handleOrientationOrResize, { passive: true });
 
     // Show Skip button after 1.5 seconds
     const skipTimer = setTimeout(() => {
@@ -172,8 +252,10 @@ export function CinematicPreloader() {
       clearTimeout(skipTimer);
       if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
       window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("resize", handleOrientationOrResize);
+      window.removeEventListener("orientationchange", handleOrientationOrResize);
     };
-  }, [pathname, videoSrc, attemptPlay, triggerExit]);
+  }, [pathname, isPortraitOrMobile, attemptPlay, triggerExit]);
 
   // Only render on homepage
   if (pathname !== "/" || !isActive) {
@@ -186,19 +268,22 @@ export function CinematicPreloader() {
       role="status"
       aria-label="Loading MEDDY Global Solutions"
       onClick={handleOverlayClick}
-      style={{ zIndex: 99999 }}
+      style={{
+        zIndex: 99999,
+        backgroundImage: posterSrc ? `url(${posterSrc})` : undefined,
+      }}
     >
       <div className="preloader-video-container">
-        {/* Native HTML5 Video Element */}
+        {/* Native HTML5 Video Element with Selected Source */}
         <video
           ref={videoRef}
-          src={videoSrc}
+          src={videoSrc || undefined}
+          poster={posterSrc || undefined}
           className="preloader-video"
           muted
           playsInline
           autoPlay
           preload="auto"
-          poster="/media/intro-poster.webp"
           onEnded={triggerExit}
           onTimeUpdate={() => {
             const video = videoRef.current;
@@ -207,13 +292,14 @@ export function CinematicPreloader() {
             }
           }}
           aria-hidden="true"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        />
 
         {/* Final Frame Still Image Overlay */}
         <div
           className={`preloader-last-frame ${showLastFrame ? "is-visible" : ""}`}
+          style={{
+            backgroundImage: lastFrameSrc ? `url(${lastFrameSrc})` : undefined,
+          }}
           aria-hidden="true"
         />
       </div>
