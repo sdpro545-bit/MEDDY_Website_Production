@@ -31,11 +31,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.meddyglobalsolutions.com"),
   title: "MEDDY GLOBAL SOLUTIONS LTD — Industrial Engineering & Technical Services",
   description:
-    "Engineering, maintenance, fabrication, procurement and technical staffing delivered from Lekki, Lagos, Nigeria.",
+    "Engineering, maintenance, fabrication, procurement and technical staffing delivered across Nigeria.",
   keywords: [
     "Industrial engineering Nigeria",
-    "Plant maintenance Lagos",
-    "Fabrication Lekki",
+    "Plant maintenance Nigeria",
+    "Fabrication and construction Nigeria",
     "Turbines and generators service",
     "Pumps and compressors Nigeria",
     "MEDDY Global Solutions",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "MEDDY GLOBAL SOLUTIONS LTD",
     title: "MEDDY GLOBAL SOLUTIONS LTD — Industrial Engineering & Technical Services",
     description:
-      "Maintenance, fabrication, procurement and technical staffing, delivered from our office in Lekki, Lagos.",
+      "Maintenance, fabrication, procurement and technical staffing delivered across Nigeria.",
     images: [
       {
         url: "/images/hero.webp",

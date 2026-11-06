@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { siteContent } from "@/content/siteContent";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { MapPin, Mail, ArrowUpRight, ShieldCheck, Clock } from "lucide-react";
+import { MapPin, Mail, ArrowUpRight, ShieldCheck, Clock, Phone, MessageCircle } from "lucide-react";
 
 export const metadata = {
   title: "Contact Us — MEDDY GLOBAL SOLUTIONS LTD",
   description:
-    "Get in touch with MEDDY Global Solutions Ltd in Lekki, Lagos, Nigeria for industrial maintenance contracts, engineering scopes, and technical tenders.",
+    "Get in touch with MEDDY Global Solutions Ltd for industrial maintenance contracts, engineering scopes, and technical tenders across Nigeria.",
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/contact.webp"
-            alt="Lagos office exterior"
+            alt="Head office exterior"
             fill
             className="object-cover object-center"
             priority
@@ -48,18 +48,19 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#64727C] block">
-                  Office Location
+                  Visit Our Address
                 </span>
                 <h2 className="text-3xl font-bold text-[#20262B]">
-                  Lekki Operational Base
+                  Official Registered Office
                 </h2>
                 <p className="text-sm text-[#64727C] leading-relaxed">
-                  Our central administrative and technical coordination office is located in Lekki, Lagos, providing responsive communication for client projects across the region.
+                  Our central administrative and technical coordination office coordinates responsive communication and field mobilization for client projects across Nigeria.
                 </p>
               </div>
 
-              {/* Address Card */}
+              {/* Address & Direct Channels Card */}
               <div className="p-7 rounded-[22px] bg-[#F5FAFC] border border-[#E4EDF2] space-y-5">
+                {/* Physical Address */}
                 <div className="flex items-start gap-3.5">
                   <div className="w-10 h-10 rounded-full bg-white border border-[#E4EDF2] flex items-center justify-center text-[#0CA3DC] flex-shrink-0 mt-0.5">
                     <MapPin className="w-5 h-5" />
@@ -83,6 +84,55 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Telephone & WhatsApp Channels */}
+                <div className="pt-4 border-t border-[#E4EDF2] flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-full bg-white border border-[#E4EDF2] flex items-center justify-center text-[#0CA3DC] flex-shrink-0 mt-0.5">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#20262B]">
+                      Telephone & Field Coordination
+                    </span>
+                    <p className="text-sm">
+                      <a
+                        href={`tel:${siteContent.company.phoneRaw}`}
+                        className="text-[#0CA3DC] font-semibold hover:underline"
+                      >
+                        {siteContent.company.phone}
+                      </a>
+                    </p>
+                    <p className="text-xs text-[#64727C]">
+                      Direct line for engineering inquiries, maintenance calls, and tenders.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-[#E4EDF2] flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 flex-shrink-0 mt-0.5">
+                    <MessageCircle className="w-5 h-5" />
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#20262B]">
+                      WhatsApp Direct
+                    </span>
+                    <p className="text-sm">
+                      <a
+                        href={siteContent.company.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 font-semibold hover:underline inline-flex items-center gap-1.5"
+                      >
+                        <span>{siteContent.company.phone}</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    </p>
+                    <p className="text-xs text-[#64727C]">
+                      Instant messaging channel for urgent facility and equipment requirements.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Channel */}
                 <div className="pt-4 border-t border-[#E4EDF2] flex items-start gap-3.5">
                   <div className="w-10 h-10 rounded-full bg-white border border-[#E4EDF2] flex items-center justify-center text-[#0CA3DC] flex-shrink-0 mt-0.5">
                     <Mail className="w-5 h-5" />
@@ -109,7 +159,7 @@ export default function ContactPage() {
               {/* Google Maps Embed / Visual Reference */}
               <div className="rounded-[22px] overflow-hidden border border-[#E4EDF2] shadow-xs relative aspect-[16/10] bg-[#101E2B]">
                 <iframe
-                  title="MEDDY Global Solutions Lekki Office Location"
+                  title="MEDDY Global Solutions Registered Office Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.739770519106!2d3.4735!3d6.4402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4532b2b1155%3A0x6b4ef8212134267!2sOlushola%20Agbaje%20St%2C%20Lekki%20Phase%20I%2C%20Lekki%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
                   width="100%"
                   height="100%"

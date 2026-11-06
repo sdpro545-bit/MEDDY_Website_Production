@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 // Media Asset Constants
 const MEDIA_DESKTOP = {
-  video: "/media/intro-1080.mp4",
+  video: "/media/intro-1080%20Desktop.mp4",
   poster: "/media/intro-poster.webp",
   lastFrame: "/media/intro-last-frame.webp",
 };

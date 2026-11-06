@@ -46,8 +46,10 @@ export const siteContent = {
       googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=5B+Olushola+Agbaje+Street+Lekki+Lagos+Nigeria",
     },
     email: "info@meddyglobalsolutions.com",
-    // Deliberate omissions per client directives (Section 0A.3)
-    // No phone number, no WhatsApp, no tagline, no unverified social profiles.
+    routingEmail: "mglobalsolutions185@gmail.com",
+    phone: "+234 803 377 4429",
+    phoneRaw: "+2348033774429",
+    whatsappUrl: "https://wa.me/2348033774429",
   },
 
   navigation: [
@@ -56,21 +58,20 @@ export const siteContent = {
     { label: "Services", href: "/services" },
     { label: "Capabilities", href: "/capabilities" },
     { label: "HSSE & Quality", href: "/hsse" },
-    { label: "Contact", href: "/contact" },
   ],
 
   hero: {
-    headline: "Engineering and technical services for industry",
-    paragraph: "Maintenance, fabrication, procurement and technical staffing, delivered from our office in Lekki, Lagos.",
+    headline: "Engineering and\nTechnical Service for\nIndustry",
+    paragraph: "Delivering end-to-end EPIC and Rotating Equipment Solutions for Nigeria’s Energy, Oil & Gas, and Industrial Sectors combining innovation, reliability, and safety to power your operations.",
     primaryCta: {
-      label: "Request a quote",
+      label: "Contact Us",
       href: "/contact",
     },
     secondaryCta: {
-      label: "View services",
+      label: "Our Services",
       href: "/services",
     },
-    locationLabel: "Lekki, Lagos, Nigeria",
+    locationLabel: "Nigeria",
     capabilityKeywords: [
       "Maintenance",
       "Fabrication",
@@ -83,22 +84,22 @@ export const siteContent = {
   },
 
   about: {
-    eyebrow: "About us",
-    heading: "Practical engineering support, from planning to handover",
-    paragraph: "MEDDY Global Solutions Ltd provides engineering, maintenance and procurement services for industrial operations. Our office is in Lekki, Lagos.",
+    eyebrow: "About Us",
+    heading: "Practical Engineering Support, from Planning to Handover",
+    paragraph: "MEDDY GLOBAL SOLUTIONS LTD provides engineering, maintenance and procurement services for industrial operations across Nigeria.",
     cta: {
-      label: "Learn more about us",
+      label: "Learn More About Us",
       href: "/about",
     },
     cards: [
       {
-        title: "Maintenance and technical support",
+        title: "Maintenance and Technical Support",
         description: "Planned and responsive maintenance for plant and rotating equipment.",
         icon: "Wrench",
         status: "draft" as const,
       },
       {
-        title: "Procurement and logistics",
+        title: "Procurement and Logistics",
         description: "Sourcing, purchasing and delivering industrial equipment and materials to site.",
         icon: "PackageCheck",
         status: "draft" as const,
@@ -109,8 +110,8 @@ export const siteContent = {
   },
 
   services: {
-    eyebrow: "Our services",
-    heading: "What we can do for your operations",
+    eyebrow: "Our Core Capabilities",
+    heading: "Engineering and Technical Services for Every Phase of Operations",
     status: "draft" as const,
     items: [
       // Core Services (9)
@@ -346,22 +347,22 @@ export const siteContent = {
 
   values: [
     {
-      title: "Safety first",
+      title: "Safety First",
       description: "Planning and conducting all work with strict attention to personal safety, environmental care, and equipment protection.",
       status: "draft",
     },
     {
-      title: "Clear communication",
+      title: "Clear Communication",
       description: "Transparent coordination with clients, suppliers, and field personnel at every project phase.",
       status: "draft",
     },
     {
-      title: "Quality in every job",
+      title: "Quality in Every Job",
       description: "Adhering to strict engineering drawings, procedures, and documented inspection milestones.",
       status: "draft",
     },
     {
-      title: "Reliable delivery",
+      title: "Reliable Delivery",
       description: "Delivering practical solutions on schedule with dedicated follow-through.",
       status: "draft",
     },
@@ -369,23 +370,23 @@ export const siteContent = {
 
   hsse: {
     eyebrow: "Health, Safety, Security & Environment",
-    heading: "Commitment to safe and responsible operations",
+    heading: "Commitment to Safe and Responsible Operations",
     intro: "At MEDDY GLOBAL SOLUTIONS LTD, safeguarding people, assets, and the environment is integral to our work in industrial facilities and field operations.",
     commitments: [
       {
-        title: "Operational safety planning",
+        title: "Operational Safety Planning",
         description: "We assess hazards before work commences, ensuring all personnel are equipped with required PPE and brief on site-specific safety protocols.",
       },
       {
-        title: "Environmental stewardship",
+        title: "Environmental Stewardship",
         description: "We handle lubricants, fluids, and industrial waste with care to minimise environmental impact and maintain clean work areas.",
       },
       {
-        title: "Quality documentation",
+        title: "Quality Documentation",
         description: "We maintain clear records of inspections, torque logs, pressure tests, and commissioning checklists for every maintenance activity.",
       },
       {
-        title: "Continuous verification",
+        title: "Continuous Verification",
         description: "We regularly review field practices and tool calibrations to uphold high technical standards across all client assignments.",
       },
     ] as HSSECommitment[],
@@ -393,10 +394,10 @@ export const siteContent = {
   },
 
   ctaBand: {
-    heading: "Ready to discuss your engineering requirements?",
-    paragraph: "Contact our team in Lekki, Lagos to discuss maintenance contracts, fabrication scopes, or equipment support.",
+    heading: "Ready to Discuss Your Engineering Requirements?",
+    paragraph: "Contact our engineering team to discuss maintenance contracts, fabrication scopes, or equipment support.",
     primaryAction: {
-      label: "Send an enquiry",
+      label: "Contact Us",
       href: "/contact",
     },
     directEmail: "info@meddyglobalsolutions.com",
@@ -404,7 +405,7 @@ export const siteContent = {
 
   footer: {
     legalNotice: "MEDDY GLOBAL SOLUTIONS LTD. All rights reserved.",
-    summary: "Engineering, maintenance, fabrication and procurement services for industrial facilities, based in Lekki, Lagos, Nigeria.",
+    summary: "Engineering, maintenance, fabrication and procurement services for industrial facilities across Nigeria.",
   },
 };
 

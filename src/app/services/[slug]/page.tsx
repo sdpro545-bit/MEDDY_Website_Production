@@ -165,7 +165,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   Request a Scope Quote
                 </h3>
                 <p className="text-xs sm:text-sm text-[#64727C] leading-relaxed">
-                  Send your equipment specifications, plant location, or maintenance enquiry to our technical team in Lekki, Lagos.
+                  Send your equipment specifications, plant location, or maintenance enquiry to our technical team.
                 </p>
                 <div className="space-y-3 pt-2">
                   <Link

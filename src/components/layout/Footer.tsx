@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "@/content/siteContent";
-import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight, Phone, MessageSquare } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,10 +25,10 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold tracking-tight text-xl text-white">
-                  MEDDY
+                  MEDDY GLOBAL
                 </span>
-                <span className="text-xs font-semibold tracking-widest text-[#0CA3DC] uppercase">
-                  Global Solutions Ltd
+                <span className="text-xs font-normal tracking-widest text-[#0CA3DC] uppercase">
+                  SOLUTIONS LTD
                 </span>
               </div>
             </Link>
@@ -41,8 +41,17 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#0CA3DC] flex-shrink-0 mt-1" />
                 <span className="leading-snug text-white/70">
-                  {siteContent.company.address.formatted}
+                  Head Office & Operational Base, Nigeria
                 </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-[#0CA3DC] flex-shrink-0" />
+                <a
+                  href={`tel:${siteContent.company.phoneRaw}`}
+                  className="text-white/80 hover:text-[#0CA3DC] transition-colors"
+                >
+                  {siteContent.company.phone}
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#0CA3DC] flex-shrink-0" />

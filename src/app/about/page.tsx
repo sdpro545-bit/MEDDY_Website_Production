@@ -8,7 +8,7 @@ import { ArrowRight, MapPin, Shield, CheckCircle2, Building, Wrench } from "luci
 export const metadata = {
   title: "About Us — MEDDY GLOBAL SOLUTIONS LTD",
   description:
-    "Learn about MEDDY Global Solutions Ltd, providing engineering, maintenance and procurement services from Lekki, Lagos, Nigeria.",
+    "Learn about MEDDY Global Solutions Ltd, providing engineering, maintenance and procurement services across Nigeria.",
 };
 
 export default function AboutPage() {
@@ -33,10 +33,10 @@ export default function AboutPage() {
             Company Overview
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-3xl">
-            Practical engineering support, from planning to handover
+            Practical Engineering Support, from Planning to Handover
           </h1>
           <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-            MEDDY Global Solutions Ltd provides engineering, maintenance and procurement services for industrial operations.
+            MEDDY GLOBAL SOLUTIONS LTD provides engineering, maintenance and procurement services for industrial operations across Nigeria.
           </p>
 
           {/* Quick Metrics Strip */}
@@ -48,8 +48,8 @@ export default function AboutPage() {
               <span className="text-xs text-white/60 uppercase tracking-wider">Engineering Disciplines</span>
             </div>
             <div>
-              <span className="text-2xl font-bold text-[#0CA3DC] block">Lekki</span>
-              <span className="text-xs text-white/60 uppercase tracking-wider">Lagos Hub</span>
+              <span className="text-2xl font-bold text-[#0CA3DC] block">Nigeria</span>
+              <span className="text-xs text-white/60 uppercase tracking-wider">Operational Reach</span>
             </div>
             <div>
               <span className="text-2xl font-bold text-white block">
@@ -76,14 +76,14 @@ export default function AboutPage() {
                 Operating Base & Governance
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#20262B] tracking-tight">
-                Headquartered in Lekki, Lagos
+                Strategic Operational Base
               </h2>
               <div className="space-y-4 text-base text-[#64727C] leading-relaxed">
                 <p>
                   MEDDY GLOBAL SOLUTIONS LTD delivers technical services, equipment maintenance programmes, and procurement solutions to support industrial plant operations and rotating machinery reliability.
                 </p>
                 <p>
-                  Our operational base in Lekki, Lagos provides coordinated technical oversight, engineering planning, and logistics routing for client facilities across Nigeria.
+                  Our operational base provides coordinated technical oversight, engineering planning, and logistics routing for client facilities across Nigeria.
                 </p>
               </div>
 
@@ -94,17 +94,15 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-sm font-bold text-[#20262B]">Official Registered Office</h3>
                     <p className="text-xs sm:text-sm text-[#64727C] mt-1">
-                      {siteContent.company.address.formatted}
+                      Our verified office coordinates procurement, staffing, and field mobilization across Nigerian industrial hubs.
                     </p>
-                    <a
-                      href={siteContent.company.address.googleMapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0CA3DC] hover:text-[#087FB5] mt-2"
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0CA3DC] hover:text-[#087FB5] pt-2"
                     >
-                      <span>View on Google Maps</span>
+                      <span>Visit Our Address & Location Map</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -166,14 +164,14 @@ export default function AboutPage() {
             Discuss Your Facility's Maintenance Strategy
           </h2>
           <p className="text-base text-[#64727C] max-w-xl mx-auto">
-            Our engineering team in Lekki is available to review your equipment specs and planned overhaul schedule.
+            Our engineering team is available to review your equipment specs and planned overhaul schedule.
           </p>
           <div className="pt-2 flex justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#0CA3DC] hover:bg-[#087FB5] text-white font-semibold text-sm transition-all"
             >
-              <span>Contact Us Today</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

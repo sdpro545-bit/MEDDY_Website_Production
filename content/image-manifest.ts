@@ -171,7 +171,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   contact: {
     slot: "contact",
     path: "/images/contact.webp",
-    alt: "Commercial office exterior in Lekki, Lagos",
+    alt: "Commercial office exterior",
     aspectRatio: "16:9",
     width: 1920,
     height: 1080,

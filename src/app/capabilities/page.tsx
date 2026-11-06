@@ -171,7 +171,7 @@ export default function CapabilitiesPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
-            Detailed operational scopes across rotating equipment, plant construction, pipeline systems, and marine logistics delivered from our engineering hub in Lekki, Lagos.
+            Detailed operational scopes across rotating equipment, plant construction, pipeline systems, and marine logistics delivered across Nigeria.
           </p>
 
           {/* Quick Metrics Strip */}
@@ -183,8 +183,8 @@ export default function CapabilitiesPage() {
               <span className="text-xs text-white/60 uppercase tracking-wider">Technical Disciplines</span>
             </div>
             <div>
-              <span className="text-2xl font-bold text-[#0CA3DC] block">Lekki</span>
-              <span className="text-xs text-white/60 uppercase tracking-wider">Engineering Base</span>
+              <span className="text-2xl font-bold text-[#0CA3DC] block">Nigeria</span>
+              <span className="text-xs text-white/60 uppercase tracking-wider">Field Coverage</span>
             </div>
             <div>
               <span className="text-2xl font-bold text-white block">
@@ -282,7 +282,7 @@ export default function CapabilitiesPage() {
                           Discipline 0{idx + 1}
                         </span>
                         <span className="text-xs text-[#64727C] font-medium hidden sm:inline">
-                          Lekki Operational Roster
+                          Technical Operations Roster
                         </span>
                       </div>
 
@@ -328,7 +328,7 @@ export default function CapabilitiesPage() {
                             Mobilization Base
                           </span>
                           <span className="text-xs font-semibold text-[#20262B]">
-                            Lekki Hub, Lagos State
+                            Central Operational Base
                           </span>
                         </div>
                       </div>
@@ -380,7 +380,7 @@ export default function CapabilitiesPage() {
             Need to Evaluate a Plant Scope or Maintenance Contract?
           </h2>
           <p className="text-sm sm:text-base text-[#64727C] max-w-xl mx-auto">
-            Our technical operations team reviews equipment drawings, schedules, and mobilization requirements from our Lekki office.
+            Our technical operations team reviews equipment drawings, schedules, and mobilization requirements.
           </p>
           <div className="pt-2">
             <Link

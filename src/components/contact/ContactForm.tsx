@@ -4,6 +4,19 @@ import React, { useState } from "react";
 import { siteContent } from "@/content/siteContent";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
+function checkGibberish(text: string): boolean {
+  if (!text) return false;
+  const clean = text.trim();
+  if (/(.)\1{4,}/.test(clean)) return true;
+  const mashPatterns = [/asdfgh/i, /qwerty/i, /zxcvbn/i, /hjkl;'/i, /123456/];
+  if (mashPatterns.some((p) => p.test(clean))) return true;
+  const words = clean.split(/\s+/);
+  for (const word of words) {
+    if (word.length >= 7 && !/[aeiouyAEIOUY]/i.test(word)) return true;
+  }
+  return false;
+}
+
 export function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -28,6 +41,19 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (checkGibberish(formData.name)) {
+      setStatus("error");
+      setErrorMessage("Please enter a valid full name without random or repetitive characters.");
+      return;
+    }
+
+    if (checkGibberish(formData.message)) {
+      setStatus("error");
+      setErrorMessage("Your message appears to contain repetitive or unrecognized characters. Please provide clear details.");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 

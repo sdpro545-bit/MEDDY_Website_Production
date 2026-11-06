@@ -152,7 +152,7 @@ export function AboutSection() {
                 <span className="font-bold text-[#0EA5E0] block uppercase tracking-wider text-[10px] mb-1">
                   Verified Operations
                 </span>
-                <span>Active field deployment and maintenance infrastructure in Lekki, Lagos.</span>
+                <span>Active field deployment and maintenance infrastructure across industrial operations.</span>
               </div>
             </div>
           </div>

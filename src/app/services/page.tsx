@@ -191,7 +191,7 @@ export default function ServicesPage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#0CA3DC] hover:bg-[#087FB5] text-white font-semibold text-sm transition-all"
             >
-              <span>Submit Scope of Work</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

@@ -341,7 +341,7 @@ export function Hero() {
             {/* Bold Headline */}
             <h1
               ref={headlineRef}
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-extrabold text-white leading-[1.12] tracking-tight transition-transform outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ${
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-extrabold text-white leading-[1.12] tracking-tight whitespace-pre-line transition-transform outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ${
                 isIntroRunning ? "page-hero-stagger-title" : ""
               }`}
             >

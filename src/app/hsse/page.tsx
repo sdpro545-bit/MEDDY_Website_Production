@@ -148,7 +148,7 @@ export default function HSSEPage() {
             Work With a Safety-Focused Technical Partner
           </h2>
           <p className="text-base text-[#64727C]">
-            Speak with our engineering coordinators in Lekki, Lagos regarding your operational safety requirements.
+            Speak with our engineering coordinators regarding your operational safety requirements.
           </p>
           <div className="pt-2">
             <Link

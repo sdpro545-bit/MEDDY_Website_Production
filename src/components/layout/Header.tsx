@@ -125,14 +125,14 @@ export function Header() {
                   isTransitionIce ? "text-[#06121F]" : "text-white"
                 }`}
               >
-                MEDDY
+                MEDDY GLOBAL
               </span>
               <span
-                className={`text-[10px] md:text-[11px] font-semibold tracking-widest uppercase transition-colors ${
+                className={`text-[9.5px] md:text-[10.5px] font-normal tracking-wider uppercase transition-colors ${
                   isTransitionIce ? "text-[#06121F]/70" : "text-white/80"
                 }`}
               >
-                Global Solutions
+                SOLUTIONS LTD
               </span>
             </div>
           </Link>
@@ -168,7 +168,7 @@ export function Header() {
               href="/contact"
               className="inline-flex items-center gap-2 px-5 lg:px-6 py-2.5 rounded-full bg-[#0EA5E0] hover:bg-[#087FB5] text-white text-xs lg:text-sm font-semibold transition-all shadow-sm hover:shadow-[0_0_16px_rgba(14,165,224,0.4)] active:scale-[0.98]"
             >
-              <span>Request a Quote</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -246,8 +246,11 @@ export function Header() {
         >
           <div className="text-xs text-white/65 space-y-1">
             <p className="font-semibold text-white/90">{siteContent.company.legalName}</p>
-            <p>{siteContent.company.address.formatted}</p>
-            <a href={`mailto:${siteContent.company.email}`} className="text-[#0EA5E0] block mt-1 font-medium">
+            <p className="text-white/70">Engineering & Technical Services Across Nigeria</p>
+            <a href={`tel:${siteContent.company.phoneRaw}`} className="text-white/80 block mt-1">
+              {siteContent.company.phone}
+            </a>
+            <a href={`mailto:${siteContent.company.email}`} className="text-[#0EA5E0] block font-medium">
               {siteContent.company.email}
             </a>
           </div>
@@ -256,7 +259,7 @@ export function Header() {
             onClick={() => setMobileMenuOpen(false)}
             className="w-full text-center py-3.5 rounded-full bg-[#0EA5E0] hover:bg-[#087FB5] active:scale-[0.97] text-white font-semibold text-sm transition-all shadow-[0_0_20px_rgba(14,165,224,0.35)]"
           >
-            Request a Quote
+            Contact Us
           </Link>
         </div>
       </div>

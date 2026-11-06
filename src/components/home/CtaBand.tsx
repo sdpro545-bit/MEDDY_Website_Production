@@ -28,7 +28,7 @@ export function CtaBand() {
                 href="/contact"
                 className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#0CA3DC] hover:bg-[#087FB5] text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-md shadow-[#0CA3DC]/30 active:scale-[0.98]"
               >
-                <span>Send an enquiry</span>
+                <span>{siteContent.ctaBand.primaryAction.label}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
