@@ -140,17 +140,21 @@ body.preloader-scroll-locked {
 
 /* Mobile & Portrait Screen Optimization:
    Ensures the brand name below the icon is 100% visible, centered,
-   and executes a dynamic cinematic zoom in after the intro finishes playing */
+   and executes a dynamic cinematic zoom in while strictly maintaining the vertical frame */
 @media (max-width: 768px), (orientation: portrait) {
   .preloader-video {
+    width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
-    object-position: center center;
+    object-position: center center !important;
   }
 
   .preloader-last-frame {
+    width: 100% !important;
+    height: 100% !important;
     background-size: contain !important;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
   }
 
   .preloader-video-container {

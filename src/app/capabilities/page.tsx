@@ -183,7 +183,7 @@ export default function CapabilitiesPage() {
               <span className="text-xs text-white/60 uppercase tracking-wider">Technical Disciplines</span>
             </div>
             <div>
-              <span className="text-2xl font-bold text-[#0CA3DC] block">Nigeria</span>
+              <span className="text-2xl font-bold text-[#0CA3DC] block">Worldwide</span>
               <span className="text-xs text-white/60 uppercase tracking-wider">Field Coverage</span>
             </div>
             <div>

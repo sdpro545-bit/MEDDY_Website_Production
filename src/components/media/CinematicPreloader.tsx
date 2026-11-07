@@ -58,7 +58,10 @@ export function CinematicPreloader() {
   // Helper: check if viewport is <= 768px OR in portrait orientation
   const isPortraitOrMobile = useCallback(() => {
     if (typeof window === "undefined") return false;
-    return window.matchMedia("(max-width: 768px), (orientation: portrait)").matches;
+    return (
+      window.innerWidth <= 768 ||
+      window.matchMedia("(max-width: 768px), (orientation: portrait)").matches
+    );
   }, []);
 
   // Focus transfer to main heading on exit
@@ -85,16 +88,18 @@ export function CinematicPreloader() {
     if (hasTriggeredExitRef.current) return;
     hasTriggeredExitRef.current = true;
 
-    // Use the correct still for current orientation at exit
-    const portraitNow = isPortraitOrMobile();
-    const finalStill = portraitNow ? MEDIA_MOBILE.lastFrame : MEDIA_DESKTOP.lastFrame;
-    setLastFrameSrc(finalStill);
-    setShowLastFrame(true);
-
+    // Pause the video cleanly so it stays frozen on its final frame in its exact natural aspect ratio
+    // without swapping to an image overlay or flashing landscape
     if (videoRef.current) {
       try {
         videoRef.current.pause();
       } catch {}
+    } else {
+      // Fallback still image only if video element is not available
+      const portraitNow = isPortraitOrMobile();
+      const finalStill = portraitNow ? MEDIA_MOBILE.lastFrame : MEDIA_DESKTOP.lastFrame;
+      setLastFrameSrc(finalStill);
+      setShowLastFrame(true);
     }
 
     // Hold final frame momentarily so the logo breathes
