@@ -62,7 +62,7 @@ export const siteContent = {
 
   hero: {
     headline: "Engineering and\nTechnical Service for\nIndustry",
-    paragraph: "Delivering end-to-end EPIC and Rotating Equipment Solutions for Nigeria’s Energy, Oil & Gas, and Industrial Sectors combining innovation, reliability, and safety to power your operations.",
+    paragraph: "Delivering end-to-end EPICM and Rotating Equipment Solutions for Nigeria’s Energy, Oil & Gas, and Industrial Sectors combining innovation, reliability, and safety to power your operations.",
     primaryCta: {
       label: "Contact Us",
       href: "/contact",
@@ -133,9 +133,9 @@ export const siteContent = {
       {
         id: "epic-epcm-services",
         slug: "epic-epcm-services",
-        title: "EPIC & EPCM Services",
+        title: "EPICM Services",
         category: "core",
-        summary: "Engineering, procurement, installation and commissioning, managed as one coordinated scope.",
+        summary: "Engineering, Procurement, Installation, Commissioning and Management delivered as a coordinated technical solution.",
         capabilities: [
           "Front-end engineering and design support",
           "Equipment and materials procurement",
@@ -395,7 +395,7 @@ export const siteContent = {
 
   ctaBand: {
     heading: "Ready to Discuss Your Engineering Requirements?",
-    paragraph: "Contact our engineering team to discuss maintenance services, fabrication scopes, or equipment support.",
+    paragraph: "Contact our engineering team to discuss maintenance services, fabrication projects, or equipment support.",
     primaryAction: {
       label: "Contact Us",
       href: "/contact",

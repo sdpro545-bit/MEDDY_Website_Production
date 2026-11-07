@@ -29,7 +29,7 @@ const ABOUT_SLIDES = [
   {
     src: "/images/about-4.webp",
     alt: "Precision mechanical servicing and alignment on industrial pumps and drives",
-    tag: "EPIC & Field Support",
+    tag: "EPICM & Field Support",
     caption: "Full lifecycle engineering execution from pre-commissioning through maintenance.",
   },
 ];

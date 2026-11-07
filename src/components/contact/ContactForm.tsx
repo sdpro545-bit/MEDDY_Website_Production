@@ -103,7 +103,7 @@ export function ContactForm() {
           </div>
           <h4 className="text-xl font-bold text-[#20262B]">Enquiry Received</h4>
           <p className="text-sm text-[#64727C] max-w-md mx-auto">
-            Thank you for reaching out to MEDDY GLOBAL SOLUTIONS LTD. Our team will review your scope requirements and respond promptly to your provided email address.
+            Thank you for reaching out to MEDDY GLOBAL SOLUTIONS LTD. Our team will review your technical requirements and respond promptly to your provided email address.
           </p>
           <button
             type="button"
@@ -161,10 +161,10 @@ export function ContactForm() {
             />
           </div>
 
-          {/* Service / Scope Category */}
+          {/* Service Category */}
           <div className="space-y-1.5">
             <label htmlFor="subject" className="block text-xs font-semibold uppercase tracking-wider text-[#20262B]">
-              Area of Interest / Service Scope
+              Area of Interest / Service Category
             </label>
             <select
               id="subject"
@@ -194,7 +194,7 @@ export function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              placeholder="Outline your facility location, equipment specifications, maintenance cadence, or technical scope..."
+              placeholder="Outline your facility location, equipment specifications, maintenance cadence, or technical requirements..."
               className="w-full px-4 py-3 rounded-xl bg-white border border-[#E4EDF2] focus:border-[#0CA3DC] focus:ring-2 focus:ring-[#0CA3DC]/20 text-sm text-[#20262B] transition-all outline-none resize-y"
             />
           </div>

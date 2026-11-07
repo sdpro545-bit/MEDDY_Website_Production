@@ -15,7 +15,7 @@ export function ValuesSection() {
               Operational Standards
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#20262B] tracking-tight">
-              Values guiding our engineering delivery
+              Value Guiding Our Engineering Delivery
             </h2>
           </div>
           <Link

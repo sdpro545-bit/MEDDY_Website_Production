@@ -124,7 +124,7 @@ export async function POST(request: Request) {
             </table>
 
             <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
-              <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #64748B; font-weight: 600; margin-bottom: 10px;">Scope & Specifications</span>
+              <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #64748B; font-weight: 600; margin-bottom: 10px;">Enquiry Details & Specifications</span>
               <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #334155; white-space: pre-wrap;">${message}</p>
             </div>
 
@@ -151,7 +151,7 @@ export async function POST(request: Request) {
           reply_to: email,
           subject: `[Web Enquiry] ${subject || "General Industrial Enquiry"} — ${name.trim()}`,
           html: htmlBody,
-          text: `MEDDY GLOBAL SOLUTIONS LTD\nNew Web Enquiry\n\nCategory: ${subject || "General"}\nClient: ${name}\nEmail: ${email}\nDate: ${new Date().toISOString()}\n\nScope:\n${message}\n\nRouted to: ${recipient}`,
+          text: `MEDDY GLOBAL SOLUTIONS LTD\nNew Web Enquiry\n\nCategory: ${subject || "General"}\nClient: ${name}\nEmail: ${email}\nDate: ${new Date().toISOString()}\n\nMessage Details:\n${message}\n\nRouted to: ${recipient}`,
         }),
       });
 

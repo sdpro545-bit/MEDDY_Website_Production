@@ -38,7 +38,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#06121F] via-[#06121F]/60 to-black/60" />
         <div className="relative max-w-7xl mx-auto px-6 space-y-4">
           <span className="text-xs font-semibold tracking-widest uppercase text-[#0CA3DC] block">
-            Scope of Work
+            Capabilities
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
             Industrial Engineering & Technical Services
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                       href={`/services/${service.slug}`}
                       className="inline-flex items-center justify-between w-full py-3 px-4 rounded-xl bg-[#F5FAFC] group-hover:bg-[#0CA3DC] text-[#20262B] group-hover:text-white text-xs font-semibold transition-all duration-200"
                     >
-                      <span>Explore Full Scope</span>
+                      <span>Explore More</span>
                       <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <h2 className="text-3xl font-bold text-[#20262B]">
-            Need a Custom Service Scope or Technical Proposal?
+            Need a Custom Service or Technical Proposal?
           </h2>
           <p className="text-base text-[#64727C]">
             Our engineering team reviews specific plant requirements, equipment datasheets, and maintenance schedules to provide detailed technical proposals.

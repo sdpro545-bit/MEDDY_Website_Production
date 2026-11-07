@@ -129,7 +129,7 @@ const capabilityMetadataMap: Record<string, CapabilityMeta> = {
   },
   "consultancy-services": {
     environment: "Client Engineering Offices",
-    equipmentType: "Facility Scopes & Reliability Plans",
+    equipmentType: "Facility Operations & Reliability Plans",
     fieldDeliverable: "Engineering reviews & tender support",
     documentation: "Technical evaluation reports",
     filterGroup: "marine-logistics",
@@ -171,7 +171,7 @@ export default function CapabilitiesPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
-            Detailed operational scopes across rotating equipment, plant construction, pipeline systems, and marine logistics delivered across Nigeria.
+            Detailed technical operations across rotating equipment, plant construction, pipeline systems, and marine logistics delivered Worldwide.
           </p>
 
           {/* Quick Metrics Strip */}
@@ -290,7 +290,7 @@ export default function CapabilitiesPage() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3" data-no-reveal="true">
                         <div className="p-3.5 rounded-xl bg-[#F5FAFC] border border-[#E4EDF2]">
                           <span className="text-[10px] font-bold uppercase tracking-wider text-[#64727C] block mb-0.5">
-                            Equipment Scope
+                            Equipment & Systems
                           </span>
                           <span className="text-xs font-semibold text-[#20262B]">
                             {meta.equipmentType}
@@ -369,7 +369,7 @@ export default function CapabilitiesPage() {
       <section className="pt-8 pb-16 bg-white border-t border-[#E4EDF2]">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <h2 className="text-3xl font-bold text-[#20262B]">
-            Need to Evaluate a Plant Scope or Maintenance ?
+            Need to Evaluate Plant Services or Maintenance?
           </h2>
           <p className="text-sm sm:text-base text-[#64727C] max-w-xl mx-auto">
             Our technical operations team reviews equipment drawings, schedules, and mobilization requirements.

@@ -334,7 +334,7 @@ export function Hero() {
             ===================================================================== */}
         <div
           ref={contentRef}
-          className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center py-6 sm:py-8 md:py-10"
+          className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-end pb-5 sm:pb-7 md:justify-center md:py-10"
         >
           <div className="max-w-2xl lg:max-w-3xl space-y-4 md:space-y-5">
             {/* Bold Headline with "Technical Service" highlighted in brand light blue */}
@@ -398,12 +398,10 @@ export function Hero() {
               <span>Capability Coverage</span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-white/90">
-              {siteContent.hero.capabilityKeywords.map((keyword, idx) => (
+            <div className="flex flex-wrap items-center gap-x-5 sm:gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-white/90">
+              {siteContent.hero.capabilityKeywords.map((keyword) => (
                 <div key={keyword} className="flex items-center gap-2">
-                  {idx > 0 && (
-                    <span className="text-white/30 hidden sm:inline">•</span>
-                  )}
+                  <span className="w-1.5 h-1.5 rounded-full bg-white flex-shrink-0" />
                   <span className="hover:text-[#0EA5E0] transition-colors">
                     {keyword}
                   </span>

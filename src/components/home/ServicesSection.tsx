@@ -29,7 +29,7 @@ export function ServicesSection() {
             {siteContent.services.heading}
           </h2>
           <p className="text-sm sm:text-base text-[#64727C] pt-1">
-            Planned and responsive technical scopes engineered for industrial operations and rotating plant equipment.
+            Planned and responsive technical services engineered for industrial operations and rotating plant equipment.
           </p>
         </div>
 

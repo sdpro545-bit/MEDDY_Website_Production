@@ -12,9 +12,9 @@ Status: `draft` (CLIENT REVIEW PENDING)
   - Condition monitoring and reporting
   - Spare parts planning and lifecycle tracking
 
-### EPIC & EPCM Services
+### EPICM Services
 - **Slug:** `epic-epcm-services`
-- **Summary:** Engineering, procurement, installation and commissioning, managed as one coordinated scope.
+- **Summary:** Engineering, Procurement, Installation, Commissioning and Management delivered as a unified solution.
 - **Capabilities:**
   - Front-end engineering and design support
   - Equipment and materials procurement

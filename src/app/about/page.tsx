@@ -134,7 +134,7 @@ export default function AboutPage() {
               How We Approach Engineering Delivery
             </h2>
             <p className="text-sm text-[#64727C]">
-              Every contract is executed with clear scope definition, verified inspection records, and disciplined safety standards.
+              Every contract is executed with clear project definition, verified inspection records, and disciplined safety standards.
             </p>
           </div>
 

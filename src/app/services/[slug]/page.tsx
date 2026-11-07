@@ -67,7 +67,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           </nav>
 
           <div className="inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold tracking-wider uppercase text-[#0CA3DC] border border-white/20">
-            {service.category === "core" ? "Core Engineering Scope" : "Specialist Technical Scope"}
+            {service.category === "core" ? "Core Engineering Services" : "Specialist Technical Services"}
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight max-w-3xl">
@@ -84,17 +84,17 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            {/* Left Technical Scope */}
+            {/* Left Technical Capabilities */}
             <div className="lg:col-span-7 space-y-10">
               <div className="space-y-4">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#64727C] block">
-                  Detailed Scope of Capabilities
+                  Detailed Capabilities
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#20262B]">
                   Engineering Capabilities & Deliverables
                 </h2>
                 <p className="text-sm sm:text-base text-[#64727C] leading-relaxed">
-                  Under our {service.title} scope, MEDDY GLOBAL SOLUTIONS LTD provides disciplined field execution, verified inspection records, and comprehensive lifecycle support for plant operators.
+                  Under our {service.title}, MEDDY GLOBAL SOLUTIONS LTD provides disciplined field execution, verified inspection records, and comprehensive lifecycle support for plant operators.
                 </p>
               </div>
 
@@ -162,7 +162,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               {/* Action Card */}
               <div className="p-8 rounded-[24px] bg-[#F5FAFC] border border-[#E4EDF2] space-y-5">
                 <h3 className="text-xl font-bold text-[#20262B]">
-                  Request a Scope Quote
+                  Request a Service Quote
                 </h3>
                 <p className="text-xs sm:text-sm text-[#64727C] leading-relaxed">
                   Send your equipment specifications, plant location, or maintenance enquiry to our technical team.
@@ -194,7 +194,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-6 space-y-8">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold text-[#20262B]">
-                Related Technical Scopes
+                Related Technical Services
               </h2>
               <Link
                 href="/services"
@@ -223,7 +223,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                     </p>
                   </div>
                   <div className="pt-4 flex items-center gap-1.5 text-xs font-semibold text-[#0CA3DC]">
-                    <span>View scope</span>
+                    <span>View details</span>
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

@@ -88,7 +88,7 @@ export function Footer() {
           {/* Core Services Menu */}
           <div className="space-y-4">
             <h3 className="text-xs font-semibold tracking-widest uppercase text-white/50">
-              Core Technical Scope
+              Core Technical Services
             </h3>
             <ul className="space-y-2.5 text-sm">
               {siteContent.services.items.slice(0, 5).map((service) => (
