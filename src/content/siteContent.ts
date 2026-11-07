@@ -61,7 +61,7 @@ export const siteContent = {
   ],
 
   hero: {
-    headline: "Engineering, Procurement, Installation, Commissioning & Management\nEngineering Excellence. Integrated Solutions. Operational Success.",
+    headline: "Engineering, Procurement, Installation, Commissioning & Management\nEngineering Excellence. Integrated Solutions, Operational Success.",
     paragraph: "Delivering comprehensive EPICM solutions through innovative engineering, strategic procurement, precision installation, seamless commissioning, and efficient project management for Nigeria’s Energy, Oil & Gas, and Industrial sectors.",
     primaryCta: {
       label: "Contact Us",

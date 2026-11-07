@@ -330,13 +330,13 @@ export function Hero() {
         )}
 
         {/* =====================================================================
-            3. MAIN HERO CONTENT CONTAINER (Drifts and fades out as p rises)
+            3. MAIN HERO CONTENT CONTAINER (Vertically Centered on the Left)
             ===================================================================== */}
         <div
           ref={contentRef}
-          className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 w-full flex-1 flex flex-col justify-start pt-4 sm:pt-6 md:pt-10 lg:pt-14 pb-4 sm:pb-6 md:pb-8"
+          className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center py-6 sm:py-8 md:py-10 text-left items-start"
         >
-          <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl">
+          <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl space-y-4 sm:space-y-5 md:space-y-6">
             {/* Bold Headline with Primary EPICM Header and Tagline Highlight */}
             <h1
               ref={headlineRef}
@@ -344,28 +344,36 @@ export function Hero() {
                 isIntroRunning ? "page-hero-stagger-title" : ""
               }`}
             >
-              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-bold text-white/95 leading-[1.28] tracking-tight">
-                Engineering, Procurement, Installation, Commissioning &amp; Management
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-bold text-white/95 leading-[1.3] tracking-tight">
+                Engineering, Procurement,<br className="sm:hidden" />{" "}
+                Installation, Commissioning<br className="sm:hidden" />{" "}
+                &amp; Management
               </span>
-              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold text-[#0EA5E0] leading-[1.2] tracking-tight mt-3 sm:mt-4 md:mt-5">
-                Engineering Excellence. Integrated Solutions. Operational Success.
+              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold text-[#0EA5E0] leading-[1.2] tracking-tight mt-2.5 sm:mt-3.5">
+                Engineering Excellence.<br />
+                Integrated Solutions,<br />
+                Operational Success.
               </span>
             </h1>
 
-            {/* Supporting Paragraph with Professional Spacing & Line Height */}
+            {/* Supporting Paragraph with Exact Mobile Breaks & Responsive Desktop Flow */}
             <p
               ref={paragraphRef}
-              className={`mt-5 sm:mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/85 font-normal leading-[1.68] max-w-xl lg:max-w-3xl transition-transform ${
+              className={`text-xs sm:text-sm md:text-base lg:text-lg text-white/85 font-normal leading-[1.65] max-w-xl lg:max-w-3xl transition-transform ${
                 isIntroRunning ? "page-hero-stagger-description" : ""
               }`}
             >
-              {siteContent.hero.paragraph}
+              Delivering comprehensive EPICM solutions<br className="sm:hidden" />{" "}
+              through innovative engineering, strategic procurement,<br className="sm:hidden" />{" "}
+              precision installation, seamless commissioning, and<br className="sm:hidden" />{" "}
+              efficient project management for Nigeria&apos;s Energy,<br className="sm:hidden" />{" "}
+              Oil &amp; Gas, and Industrial sectors.
             </p>
 
-            {/* Action Buttons: Positioned lower down with generous breathing space */}
+            {/* Action Buttons: Positioned directly below text */}
             <div
               ref={buttonsRef}
-              className={`mt-6 sm:mt-8 md:mt-10 flex flex-wrap items-center gap-3.5 sm:gap-4 transition-transform ${
+              className={`pt-1 sm:pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4 transition-transform ${
                 isIntroRunning ? "page-hero-stagger-actions" : ""
               }`}
             >
