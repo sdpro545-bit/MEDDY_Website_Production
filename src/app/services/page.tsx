@@ -127,11 +127,6 @@ export default function ServicesPage() {
                         className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-[11px] font-semibold uppercase tracking-wider text-white border border-white/20">
-                          {service.category === "core" ? "Core Scope" : "Specialist Scope"}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Card Content */}

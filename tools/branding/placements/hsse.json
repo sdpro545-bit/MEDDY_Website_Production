@@ -1,0 +1,49 @@
+{
+  "image": "hsse.webp",
+  "dimensions": {
+    "width": 1200,
+    "height": 800
+  },
+  "primary_safe_zone": {
+    "y_min": 0.2,
+    "y_max": 0.8,
+    "x_min": 0.1,
+    "x_max": 0.9
+  },
+  "elements": [
+    {
+      "id": "foreground_vessel_hull_branding",
+      "type": "hull_marking",
+      "variant": "logo-footer.png",
+      "surface": "Steel vessel hull superstructure at marine terminal",
+      "position": {
+        "x": 380,
+        "y": 440,
+        "width": 440,
+        "height": 120
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#FFFFFF",
+      "blend_mode": "over",
+      "opacity": 0.95,
+      "notes": "Marine fleet markings replacing foreign vessel name with crisp corporate typography."
+    },
+    {
+      "id": "terminal_crane_nameplate",
+      "type": "equipment_nameplate",
+      "variant": "logo.png",
+      "surface": "Heavy gantry container crane side panel",
+      "position": {
+        "x": 740,
+        "y": 190,
+        "width": 220,
+        "height": 65
+      },
+      "text": "MEDDY GLOBAL",
+      "text_color": "#0F172A",
+      "blend_mode": "over",
+      "opacity": 0.94,
+      "notes": "Crane operator cab signage replacing third-party terminal logos."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "image": "marine.webp",
+  "dimensions": {
+    "width": 900,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "vessel_superstructure_name",
+      "type": "hull_marking",
+      "variant": "logo-footer.png",
+      "surface": "Cream and red offshore crew vessel superstructure",
+      "position": {
+        "x": 260,
+        "y": 390,
+        "width": 420,
+        "height": 120
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#292D32",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "Marine vessel nameplate replacing 'FAST MAMMOTH' in charcoal capital lettering."
+    }
+  ]
+}

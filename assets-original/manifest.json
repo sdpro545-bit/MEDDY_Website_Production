@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-11-06T20:21:46.917Z",
+  "description": "Untouched original source assets for MEDDY Global Solutions Ltd before brand and subject retouches.",
+  "files": {
+    "about-2.webp": {
+      "sha256": "bbbc2f3738264a1e6f3fdeb156d4dec4cfd83d619f9da40a8d448932419caf9f",
+      "size_bytes": 214372,
+      "source": "public/images/_originals/about-2.webp"
+    },
+    "about-3.webp": {
+      "sha256": "0a9bc1823c7ba84a40851bcf7a7c53b46389bd9194bcb2fddb848c9ffad486ce",
+      "size_bytes": 229706,
+      "source": "public/images/_originals/about-3.webp"
+    },
+    "about-4.webp": {
+      "sha256": "d8e84a3a0a2b0e06d38055dbc2342a07776d132c59ff13e94c46d204d4c5eaa3",
+      "size_bytes": 125674,
+      "source": "public/images/_originals/about-4.webp"
+    },
+    "about.webp": {
+      "sha256": "d46b50eb6f22ae4a0c4a70b00553746695e3f71b56a08fbe8e6b441303441497",
+      "size_bytes": 285796,
+      "source": "public/images/_originals/about.webp"
+    },
+    "consultancy.webp": {
+      "sha256": "b9224be0b188d52ba5a8392f5acf9376c927f0bd3b148d127a772b40cfe4ebed",
+      "size_bytes": 44658,
+      "source": "public/images/_originals/consultancy.webp"
+    },
+    "contact.webp": {
+      "sha256": "b0529ab4c54788abc1692b704ab88d0a136003f1b904c8146066be3e964bece8",
+      "size_bytes": 399976,
+      "source": "public/images/_originals/contact.webp"
+    },
+    "epic.webp": {
+      "sha256": "e325d6ddeb99f316bf4d7154b446d5bf51ccf23c8e3422e4a24660aa49c790dd",
+      "size_bytes": 94432,
+      "source": "public/images/_originals/epic.webp"
+    },
+    "esp.webp": {
+      "sha256": "ea3eb79977d0f00e577a20f4bc481241885c954b6c8b43ceaf3fb3700080d6e8",
+      "size_bytes": 149950,
+      "source": "public/images/_originals/esp.webp"
+    },
+    "fabrication.webp": {
+      "sha256": "b29736efbe5bf7278600566453563ba9a2091f866dae59462237fa61ce3b8fb9",
+      "size_bytes": 124624,
+      "source": "public/images/_originals/fabrication.webp"
+    },
+    "filtration.webp": {
+      "sha256": "fc98604b076c404313c41a4abbe0de1a724d4efa297127cf3b7da737b9448999",
+      "size_bytes": 187666,
+      "source": "public/images/_originals/filtration.webp"
+    },
+    "hero.webp": {
+      "sha256": "f938c5b033552041ea84e08d20cffd310d8f3639338d9efcdda03faed761abca",
+      "size_bytes": 174978,
+      "source": "public/images/_originals/hero.webp"
+    },
+    "hsse.webp": {
+      "sha256": "df3e558af7d562bc091fac262e339ffbfe4613f956a2a184d1c9901d0957bc7c",
+      "size_bytes": 205968,
+      "source": "public/images/_originals/hsse.webp"
+    },
+    "load-bank.webp": {
+      "sha256": "83a302cc0f2af70f5dc917f1a015ab0d31de214949be14a4b7606e079489a2b1",
+      "size_bytes": 347016,
+      "source": "public/images/_originals/load-bank.webp"
+    },
+    "maintenance.webp": {
+      "sha256": "8696df12fb795064a44e1796ef66c4b40ae3b16722ba47a2595446cf5b237861",
+      "size_bytes": 209454,
+      "source": "public/images/_originals/maintenance.webp"
+    },
+    "marine.webp": {
+      "sha256": "a653ace36ff4964ae918aa751cffba6214b552cf2606b3f5c65e012ee2c5c5c9",
+      "size_bytes": 218992,
+      "source": "public/images/_originals/marine.webp"
+    },
+    "motors.webp": {
+      "sha256": "0b277dd5122fdaf0b5181675af5abcc697032a2f2c2a1a8c70644f0b09ddcb4c",
+      "size_bytes": 240884,
+      "source": "public/images/_originals/motors.webp"
+    },
+    "oem.webp": {
+      "sha256": "6040fa77fbf64413ee2db17086b7de297fd0e66b2212165a1445c6dd9a61ffec",
+      "size_bytes": 79264,
+      "source": "public/images/_originals/oem.webp"
+    },
+    "pipeline.webp": {
+      "sha256": "a3121c62a40ee4f0b1c63002eaa6e34fc09c3472936c720378d35941eca0ee51",
+      "size_bytes": 226682,
+      "source": "public/images/_originals/pipeline.webp"
+    },
+    "procurement.webp": {
+      "sha256": "2f06c45c2f8d825e9101745da4e61dc1e7059f240bbe9bf73624aaa78794cc75",
+      "size_bytes": 347306,
+      "source": "public/images/_originals/procurement.webp"
+    },
+    "pumps.webp": {
+      "sha256": "15cc46ce54713f639c97157ecf94898f31f5fc173fb6d7a72bc7a88c7b53a2e5",
+      "size_bytes": 128408,
+      "source": "public/images/_originals/pumps.webp"
+    },
+    "staffing.webp": {
+      "sha256": "4528755daab820ac662446163214f5fb99a109a5254dd79c46bad4e26718e4d9",
+      "size_bytes": 226190,
+      "source": "public/images/_originals/staffing.webp"
+    },
+    "turbines.webp": {
+      "sha256": "14bd15c0e8d1e5f97eb370bb85a0ae5837e1329b37cbdfec74b4f51376302d54",
+      "size_bytes": 211196,
+      "source": "public/images/_originals/turbines.webp"
+    },
+    "marine_temp.jpg": {
+      "sha256": "f68a3db3f2ef28b471dfd6fe6466c4810f27d8b0472ff02bbb357e152301ed65",
+      "size_bytes": 2869947,
+      "source": "marine_temp.jpg (unreferenced high-res source)"
+    }
+  }
+}

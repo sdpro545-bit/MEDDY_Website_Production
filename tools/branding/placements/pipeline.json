@@ -1,0 +1,33 @@
+{
+  "image": "pipeline.webp",
+  "dimensions": {
+    "width": 896,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "pipeline_marker_band",
+      "type": "pipe_marker",
+      "variant": "logo-footer.png",
+      "surface": "High-pressure carbon steel transmission pipeline",
+      "position": {
+        "x": 260,
+        "y": 480,
+        "width": 380,
+        "height": 115
+      },
+      "curvature": "cylindrical",
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#FFFFFF",
+      "blend_mode": "over",
+      "opacity": 0.95,
+      "notes": "High-visibility regulatory flowline marker collar wrapped around pipe."
+    }
+  ]
+}

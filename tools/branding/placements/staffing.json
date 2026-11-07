@@ -1,0 +1,47 @@
+{
+  "image": "staffing.webp",
+  "dimensions": {
+    "width": 900,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "standing_worker_back_patch",
+      "type": "rear_patch",
+      "variant": "logo.png",
+      "surface": "Navy cotton-drill coverall, upper back of standing technician",
+      "position": {
+        "x": 440,
+        "y": 460,
+        "width": 145,
+        "height": 80
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#292D32",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "Large back corporate patch centred below collar with full company name."
+    },
+    {
+      "id": "standing_worker_helmet",
+      "type": "helmet_logo",
+      "variant": "logo.png",
+      "surface": "White hard hat shell with blue stripe",
+      "position": {
+        "x": 495,
+        "y": 395,
+        "width": 38,
+        "height": 44
+      },
+      "blend_mode": "multiply",
+      "opacity": 0.94,
+      "notes": "White hard hat with crown stripe and official logo."
+    }
+  ]
+}

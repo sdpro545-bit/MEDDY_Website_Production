@@ -1,0 +1,32 @@
+{
+  "image": "load-bank.webp",
+  "dimensions": {
+    "width": 896,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "load_bank_cabinet_placard",
+      "type": "equipment_nameplate",
+      "variant": "logo.png",
+      "surface": "Heavy power load bank ventilation and control enclosure",
+      "position": {
+        "x": 260,
+        "y": 490,
+        "width": 380,
+        "height": 115
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#0F172A",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "Resistive and reactive load verification unit asset tag."
+    }
+  ]
+}

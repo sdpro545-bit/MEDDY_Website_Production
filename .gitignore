@@ -35,6 +35,20 @@ yarn-error.log*
 next-env.d.ts
 
 # test screenshots, scratch scripts and temporary archives
-*.png
 *.py
 *.zip
+*.log
+/scratch/
+/phase2-review/
+/public/images/_originals/
+/public/images/_previous_phase2_backup/
+/test-*.png
+/verify-*.png
+/screenshot-*.png
+/comparison-*.png
+/crop-*.png
+/browser-test-*.png
+/preloader-debug-*.png
+/Favicon*.png
+
+

@@ -1,15 +1,60 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "@/content/siteContent";
 import { CountUpNumber } from "@/components/common/CountUpNumber";
 import { ArrowRight, Wrench, PackageCheck } from "lucide-react";
 
+const ABOUT_SLIDES = [
+  {
+    src: "/images/about.webp",
+    alt: "Nigerian engineering specialists inspecting rotating turbine machinery with diagnostic tablet",
+    tag: "Verified Operations",
+    caption: "Active field deployment and maintenance infrastructure across industrial operations.",
+  },
+  {
+    src: "/images/about-2.webp",
+    alt: "Nigerian maintenance technician in branded workwear inspecting high-pressure manifold valves",
+    tag: "Plant Maintenance",
+    caption: "Precision mechanical overhaul, torque verification, and rotating equipment diagnostics.",
+  },
+  {
+    src: "/images/about-3.webp",
+    alt: "Nigerian engineering personnel in branded safety coveralls deployed to industrial plant site",
+    tag: "Technical Staffing",
+    caption: "Certified engineering specialists deployed for onshore and offshore facility support.",
+  },
+  {
+    src: "/images/about-4.webp",
+    alt: "Precision mechanical servicing and alignment on industrial pumps and drives",
+    tag: "EPIC & Field Support",
+    caption: "Full lifecycle engineering execution from pre-commissioning through maintenance.",
+  },
+];
+
 export function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-switching multi-image state
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % ABOUT_SLIDES.length);
+  }, []);
+
+  // Auto-switch timer with pause on hover (2s delay)
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide]);
 
   // Silky dissolve handoff from hero zoom
   useEffect(() => {
@@ -137,22 +182,54 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Column (large portrait photography with badge matching reference) */}
+          {/* Right Column: Multi-Image Auto-Switching Showcase (Phase 2 dynamic animation) */}
           <div className="md:col-span-5 lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-[460px] aspect-[4/5] rounded-[24px] overflow-hidden shadow-xl border border-[#E4EDF2]/80 bg-[#1A2026]">
-              <Image
-                src="/images/about.webp"
-                alt="Engineering personnel on industrial site"
-                fill
-                sizes="(max-width: 768px) 100vw, 460px"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs">
-                <span className="font-bold text-[#0EA5E0] block uppercase tracking-wider text-[10px] mb-1">
-                  Verified Operations
-                </span>
-                <span>Active field deployment and maintenance infrastructure across industrial operations.</span>
+            <div
+              className="group relative w-full max-w-[460px] aspect-[4/5] rounded-[24px] overflow-hidden shadow-xl border border-[#E4EDF2]/80 bg-[#1A2026] select-none"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              aria-label="MEDDY Global Solutions Operations Image Gallery"
+            >
+              {/* Stack of Rotating Images */}
+              {ABOUT_SLIDES.map((slide, index) => {
+                const isActive = index === currentSlide;
+                return (
+                  <div
+                    key={slide.src}
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                      isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+                    }`}
+                  >
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 460px"
+                      priority={index === 0}
+                      className={`object-cover transition-transform duration-7000 ease-out ${
+                        isActive ? "scale-105" : "scale-100"
+                      }`}
+                    />
+                  </div>
+                );
+              })}
+
+              {/* Gradient Vignette for Text Contrast */}
+              <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
+
+              {/* Lower Text Content: Dynamic Caption */}
+              <div className="absolute bottom-6 left-6 right-6 z-30 p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-white text-xs shadow-lg transition-all duration-500">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="font-bold text-[#0CA3DC] uppercase tracking-wider text-[11px]">
+                    {ABOUT_SLIDES[currentSlide].tag}
+                  </span>
+                  <span className="text-[10px] text-white/50 font-mono">
+                    0{currentSlide + 1} / 0{ABOUT_SLIDES.length}
+                  </span>
+                </div>
+                <p className="text-white/90 leading-relaxed text-[11px] sm:text-xs">
+                  {ABOUT_SLIDES[currentSlide].caption}
+                </p>
               </div>
             </div>
           </div>

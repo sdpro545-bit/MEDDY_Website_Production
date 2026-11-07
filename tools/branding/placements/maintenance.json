@@ -1,0 +1,49 @@
+{
+  "image": "maintenance.webp",
+  "dimensions": {
+    "width": 900,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "pump_serviced_by_tag",
+      "type": "equipment_nameplate",
+      "variant": "logo.png",
+      "surface": "Heavy industrial cast iron pump volute casing",
+      "position": {
+        "x": 380,
+        "y": 510,
+        "width": 330,
+        "height": 100
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#0F172A",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "Stainless steel 'Serviced By' asset maintenance tag riveted to casing."
+    },
+    {
+      "id": "sleeve_reflective_patch",
+      "type": "chest_patch",
+      "variant": "logo.png",
+      "surface": "Navy cotton-drill sleeve with silver reflective tape",
+      "position": {
+        "x": 740,
+        "y": 80,
+        "width": 110,
+        "height": 55
+      },
+      "text": "MEDDY GLOBAL",
+      "text_color": "#292D32",
+      "blend_mode": "over",
+      "opacity": 0.95,
+      "notes": "Coverall sleeve brand badge above cuff."
+    }
+  ]
+}

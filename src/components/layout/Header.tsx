@@ -244,16 +244,6 @@ export function Header() {
             mobileMenuOpen ? "translate-y-0 opacity-100 delay-200" : "-translate-y-4 opacity-0"
           }`}
         >
-          <div className="text-xs text-white/65 space-y-1">
-            <p className="font-semibold text-white/90">{siteContent.company.legalName}</p>
-            <p className="text-white/70">Engineering & Technical Services Across Nigeria</p>
-            <a href={`tel:${siteContent.company.phoneRaw}`} className="text-white/80 block mt-1">
-              {siteContent.company.phone}
-            </a>
-            <a href={`mailto:${siteContent.company.email}`} className="text-[#0EA5E0] block font-medium">
-              {siteContent.company.email}
-            </a>
-          </div>
           <Link
             href="/contact"
             onClick={() => setMobileMenuOpen(false)}

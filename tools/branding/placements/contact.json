@@ -1,0 +1,32 @@
+{
+  "image": "contact.webp",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "primary_safe_zone": {
+    "y_min": 0.25,
+    "y_max": 0.75,
+    "x_min": 0.45,
+    "x_max": 0.95
+  },
+  "elements": [
+    {
+      "id": "facade_canopy_sign",
+      "type": "architectural_sign",
+      "variant": "logo-footer.png",
+      "surface": "Modern corporate glass and composite entrance facade canopy",
+      "position": {
+        "x": 1080,
+        "y": 460,
+        "width": 620,
+        "height": 160
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#FFFFFF",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "Deep blue illuminated entrance portal signage with precision architectural lettering."
+    }
+  ]
+}

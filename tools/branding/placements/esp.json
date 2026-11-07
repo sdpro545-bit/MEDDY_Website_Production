@@ -1,0 +1,62 @@
+{
+  "image": "esp.webp",
+  "dimensions": {
+    "width": 900,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "technician_chest_logo",
+      "type": "polo_embroidery",
+      "variant": "logo-footer.png",
+      "surface": "Charcoal polo shirt fabric, left chest",
+      "position": {
+        "x": 430,
+        "y": 440,
+        "width": 62,
+        "height": 71
+      },
+      "blend_mode": "over",
+      "opacity": 0.94,
+      "notes": "Embroidered emblem on chest of Nigerian female electrical technician."
+    },
+    {
+      "id": "bench_helmet",
+      "type": "desk_helmet",
+      "variant": "logo.png",
+      "surface": "White hard hat on workbench",
+      "position": {
+        "x": 110,
+        "y": 720,
+        "width": 50,
+        "height": 58
+      },
+      "blend_mode": "multiply",
+      "opacity": 0.94,
+      "notes": "White helmet with blue stripe and official logo placed on the diagnostic table."
+    },
+    {
+      "id": "rig_equipment_label",
+      "type": "equipment_nameplate",
+      "variant": "logo.png",
+      "surface": "ESP test rig aluminum frame",
+      "position": {
+        "x": 560,
+        "y": 240,
+        "width": 280,
+        "height": 80
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#0F172A",
+      "blend_mode": "over",
+      "opacity": 0.95,
+      "notes": "Anodized aluminum test bench apparatus placard."
+    }
+  ]
+}

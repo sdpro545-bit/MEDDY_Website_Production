@@ -65,11 +65,8 @@ export function ServicesSection() {
                   {/* Dark gradient overlay protecting contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#101E2B]/95 via-[#101E2B]/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
 
-                  {/* Top Badge: Category */}
-                  <div className="absolute top-5 left-5 right-5 flex justify-between items-center z-10">
-                    <span className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-[11px] font-semibold tracking-wider uppercase text-white/90 border border-white/20">
-                      Scope 0{index + 1}
-                    </span>
+                  {/* Top Action Icon (Diagonal Arrow) */}
+                  <div className="absolute top-5 right-5 flex justify-end items-center z-10">
                     <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-[#0CA3DC] transition-colors">
                       <ArrowUpRight className="w-4 h-4" />
                     </div>

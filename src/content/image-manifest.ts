@@ -27,7 +27,31 @@ export const imageManifest: Record<string, ImageSlot> = {
   about: {
     slot: "about",
     path: "/images/about.webp",
-    alt: "Technical personnel reviewing engineering documentation on site",
+    alt: "Nigerian engineering specialists inspecting rotating turbine machinery with diagnostic tablet",
+    aspectRatio: "4:5",
+    width: 960,
+    height: 1200,
+  },
+  "about-2": {
+    slot: "about-2",
+    path: "/images/about-2.webp",
+    alt: "Nigerian maintenance technician in branded workwear inspecting high-pressure manifold valves",
+    aspectRatio: "4:5",
+    width: 960,
+    height: 1200,
+  },
+  "about-3": {
+    slot: "about-3",
+    path: "/images/about-3.webp",
+    alt: "Nigerian engineering crew in safety coveralls advancing to site facility operations",
+    aspectRatio: "4:5",
+    width: 960,
+    height: 1200,
+  },
+  "about-4": {
+    slot: "about-4",
+    path: "/images/about-4.webp",
+    alt: "Precision mechanical servicing and alignment on industrial pumps and drives",
     aspectRatio: "4:5",
     width: 960,
     height: 1200,
@@ -35,7 +59,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   maintenance: {
     slot: "maintenance",
     path: "/images/maintenance.webp",
-    alt: "Technician servicing rotating industrial equipment in a mechanical plant",
+    alt: "Rotating equipment maintenance and overhaul station with MEDDY asset tag",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -43,7 +67,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   epic: {
     slot: "epic",
     path: "/images/epic.webp",
-    alt: "Process plant structure under installation with crane support",
+    alt: "Industrial process plant installation site with MEDDY EPCM project signboard",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -51,7 +75,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   staffing: {
     slot: "staffing",
     path: "/images/staffing.webp",
-    alt: "Technical personnel in protective gear at an industrial facility",
+    alt: "Nigerian engineering and technical personnel in MEDDY navy workwear and white safety helmets",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -59,7 +83,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   fabrication: {
     slot: "fabrication",
     path: "/images/fabrication.webp",
-    alt: "Precision structural fabrication and welding inside a workshop",
+    alt: "Precision structural fabrication and heavy welding workshop with MEDDY certification tag",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -67,7 +91,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   oem: {
     slot: "oem",
     path: "/images/oem.webp",
-    alt: "Precision machinery components and replacement bearings on a workbench",
+    alt: "Precision machinery components and replacement bearings on a workbench with MEDDY placard",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -75,7 +99,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   "load-bank": {
     slot: "load-bank",
     path: "/images/load-bank.webp",
-    alt: "Power generation and electrical load testing unit in operation",
+    alt: "Resistive and reactive load bank power verification facility with MEDDY testing placard",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -83,7 +107,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   loadBank: {
     slot: "loadBank",
     path: "/images/load-bank.webp",
-    alt: "Power generation and electrical load testing unit in operation",
+    alt: "Resistive and reactive load bank power verification facility with MEDDY testing placard",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -91,7 +115,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   pumps: {
     slot: "pumps",
     path: "/images/pumps.webp",
-    alt: "Industrial centrifugal pump unit undergoing workshop alignment",
+    alt: "Industrial centrifugal pump unit undergoing workshop alignment with MEDDY nameplate",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -99,7 +123,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   turbines: {
     slot: "turbines",
     path: "/images/turbines.webp",
-    alt: "Power generation machinery hall with heavy turbine units",
+    alt: "Power generation machinery hall with heavy turbine units and MEDDY facility banner",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -107,7 +131,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   motors: {
     slot: "motors",
     path: "/images/motors.webp",
-    alt: "Electric motor on a test bench with instrumentation and control systems",
+    alt: "Electric motor on a test bench with instrumentation and MEDDY control cabinet badge",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -115,7 +139,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   procurement: {
     slot: "procurement",
     path: "/images/procurement.webp",
-    alt: "Industrial warehouse storage with logistics staging and materials",
+    alt: "Industrial warehouse storage with logistics staging and MEDDY crate signage",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -123,7 +147,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   pipeline: {
     slot: "pipeline",
     path: "/images/pipeline.webp",
-    alt: "Flowline and pipeline infrastructure crossing field terrain",
+    alt: "Flowline and pipeline infrastructure with MEDDY flowline tag",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -131,7 +155,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   marine: {
     slot: "marine",
     path: "/images/marine.webp",
-    alt: "Offshore support vessel operating in coastal waters",
+    alt: "Offshore support vessel fleet operating in Nigerian waters with MEDDY GLOBAL fleet markings",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -139,7 +163,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   esp: {
     slot: "esp",
     path: "/images/esp.webp",
-    alt: "Submersible pump system components laid out for mechanical inspection",
+    alt: "Submersible pump system components and diagnostics bench with MEDDY equipment plate",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -147,7 +171,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   filtration: {
     slot: "filtration",
     path: "/images/filtration.webp",
-    alt: "Industrial fluid filtration vessels and high-pressure manifold lines",
+    alt: "Industrial fluid filtration vessels and pressure manifold skid with MEDDY label",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -155,7 +179,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   consultancy: {
     slot: "consultancy",
     path: "/images/consultancy.webp",
-    alt: "Engineers conducting a technical drawing and layout evaluation",
+    alt: "Engineering design office with technical CAD schematics and MEDDY project title block",
     aspectRatio: "3:4",
     width: 900,
     height: 1200,
@@ -163,7 +187,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   hsse: {
     slot: "hsse",
     path: "/images/hsse.webp",
-    alt: "Safety helmets and high-visibility equipment ready for field operations",
+    alt: "Safety helmets with MEDDY emblem and personal protective equipment compliant with ISO standards",
     aspectRatio: "3:2",
     width: 1200,
     height: 800,
@@ -171,7 +195,7 @@ export const imageManifest: Record<string, ImageSlot> = {
   contact: {
     slot: "contact",
     path: "/images/contact.webp",
-    alt: "Commercial office exterior",
+    alt: "MEDDY GLOBAL SOLUTIONS LTD engineering headquarters and operational base exterior",
     aspectRatio: "16:9",
     width: 1920,
     height: 1080,

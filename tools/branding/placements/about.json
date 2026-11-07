@@ -1,0 +1,65 @@
+{
+  "image": "about.webp",
+  "dimensions": {
+    "width": 960,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "helmet_worker_left",
+      "type": "helmet_logo",
+      "variant": "logo.png",
+      "surface": "White glossy ABS helmet",
+      "position": {
+        "x": 380,
+        "y": 345,
+        "width": 62,
+        "height": 71
+      },
+      "curvature": "spherical",
+      "blend_mode": "multiply",
+      "opacity": 0.95,
+      "notes": "Centred on front curve of white hard hat above brim."
+    },
+    {
+      "id": "patch_chest_left_worker",
+      "type": "chest_patch",
+      "variant": "logo.png",
+      "surface": "Navy cotton-drill coverall, left chest",
+      "position": {
+        "x": 420,
+        "y": 495,
+        "width": 88,
+        "height": 44
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#292D32",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "Embroidered white patch with stitched border and full corporate name."
+    },
+    {
+      "id": "patch_rear_worker_right",
+      "type": "rear_patch",
+      "variant": "logo.png",
+      "surface": "Navy cotton-drill coverall, upper back below collar",
+      "position": {
+        "x": 670,
+        "y": 530,
+        "width": 140,
+        "height": 78
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#292D32",
+      "blend_mode": "over",
+      "opacity": 0.95,
+      "notes": "Large back corporate patch centred below collar with full company name."
+    }
+  ]
+}

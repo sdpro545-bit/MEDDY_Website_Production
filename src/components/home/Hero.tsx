@@ -269,7 +269,7 @@ export function Hero() {
       <section
         className={`${
           prefersReducedMotion ? "relative min-h-[92vh]" : "sticky top-0 h-screen min-h-[92vh]"
-        } w-full flex flex-col justify-between overflow-hidden bg-[#06121F] pt-32 md:pt-36 select-none`}
+        } w-full flex flex-col justify-between overflow-hidden bg-[#06121F] pt-20 md:pt-24 select-none`}
         aria-label="Homepage Hero Overview"
       >
         {/* =====================================================================
@@ -335,23 +335,25 @@ export function Hero() {
             ===================================================================== */}
         <div
           ref={contentRef}
-          className="relative z-10 max-w-7xl mx-auto px-6 w-full my-auto py-12 md:py-16"
+          className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-4 md:pt-6 lg:pt-8 pb-4"
         >
-          <div className="max-w-2xl lg:max-w-3xl space-y-7">
-            {/* Bold Headline */}
+          <div className="max-w-2xl lg:max-w-3xl space-y-4 md:space-y-5">
+            {/* Bold Headline with "Technical Service" highlighted in brand light blue */}
             <h1
               ref={headlineRef}
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-[4.1rem] font-extrabold text-white leading-[1.12] tracking-tight whitespace-pre-line transition-transform outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ${
+              className={`text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] xl:text-[3.75rem] font-extrabold text-white leading-[1.1] tracking-tight transition-transform outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ${
                 isIntroRunning ? "page-hero-stagger-title" : ""
               }`}
             >
-              {siteContent.hero.headline}
+              Engineering and<br />
+              <span className="text-[#0EA5E0]">Technical Service</span> for<br />
+              Industry
             </h1>
 
             {/* Supporting Paragraph */}
             <p
               ref={paragraphRef}
-              className={`text-lg md:text-xl text-white/85 font-normal leading-relaxed max-w-xl transition-transform ${
+              className={`text-sm sm:text-base md:text-lg text-white/85 font-normal leading-relaxed max-w-xl lg:max-w-2xl transition-transform ${
                 isIntroRunning ? "page-hero-stagger-description" : ""
               }`}
             >
@@ -361,13 +363,13 @@ export function Hero() {
             {/* Action Buttons: Filled Pill & Ghost Pill */}
             <div
               ref={buttonsRef}
-              className={`pt-2 flex flex-wrap items-center gap-4 transition-transform ${
+              className={`pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4 transition-transform ${
                 isIntroRunning ? "page-hero-stagger-actions" : ""
               }`}
             >
               <Link
                 href={siteContent.hero.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#0EA5E0] hover:bg-[#087FB5] text-white font-semibold text-base transition-all duration-200 shadow-lg shadow-[#0EA5E0]/25 hover:shadow-[#0EA5E0]/45 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 sm:px-8 sm:py-3.5 rounded-full bg-[#0EA5E0] hover:bg-[#087FB5] text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-[#0EA5E0]/25 hover:shadow-[#0EA5E0]/45 active:scale-[0.98]"
               >
                 <span>{siteContent.hero.primaryCta.label}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -375,7 +377,7 @@ export function Hero() {
 
               <Link
                 href={siteContent.hero.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold text-base transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-7 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold text-sm sm:text-base transition-all duration-200 active:scale-[0.98]"
               >
                 <span>{siteContent.hero.secondaryCta.label}</span>
                 <ChevronRight className="w-4 h-4 text-white/70" />

@@ -1,0 +1,48 @@
+{
+  "image": "fabrication.webp",
+  "dimensions": {
+    "width": 900,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "welding_helmet_decal",
+      "type": "vinyl_decal",
+      "variant": "logo.png",
+      "surface": "Curved composite welding mask shell",
+      "position": {
+        "x": 280,
+        "y": 230,
+        "width": 88,
+        "height": 98
+      },
+      "curvature": "spherical",
+      "blend_mode": "multiply",
+      "opacity": 0.93,
+      "notes": "High-temperature vinyl decal on welding helmet flank with specular highlights."
+    },
+    {
+      "id": "fabrication_structural_placard",
+      "type": "equipment_nameplate",
+      "variant": "logo-footer.png",
+      "surface": "Structural steel girder fabrication staging beam",
+      "position": {
+        "x": 420,
+        "y": 780,
+        "width": 380,
+        "height": 110
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#FFFFFF",
+      "blend_mode": "over",
+      "opacity": 0.95,
+      "notes": "Industrial workshop structural assembly QA certification banner."
+    }
+  ]
+}

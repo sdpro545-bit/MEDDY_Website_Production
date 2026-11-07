@@ -1,0 +1,62 @@
+{
+  "image": "epic.webp",
+  "dimensions": {
+    "width": 900,
+    "height": 1200
+  },
+  "primary_safe_zone": {
+    "y_min": 0.22,
+    "y_max": 0.58,
+    "x_min": 0.08,
+    "x_max": 0.92
+  },
+  "elements": [
+    {
+      "id": "polo_back_emblem",
+      "type": "polo_embroidery",
+      "variant": "logo-footer.png",
+      "surface": "Charcoal engineering polo fabric, shoulder/back",
+      "position": {
+        "x": 410,
+        "y": 580,
+        "width": 64,
+        "height": 74
+      },
+      "blend_mode": "over",
+      "opacity": 0.92,
+      "notes": "Embroidered emblem on visible shoulder of engineer."
+    },
+    {
+      "id": "cad_monitor_title_block",
+      "type": "drawing_title_block",
+      "variant": "logo.png",
+      "surface": "Engineering workstation monitor displaying plant PID drawing",
+      "position": {
+        "x": 510,
+        "y": 390,
+        "width": 260,
+        "height": 95
+      },
+      "text": "MEDDY GLOBAL SOLUTIONS LTD",
+      "text_color": "#0F172A",
+      "blend_mode": "over",
+      "opacity": 0.96,
+      "notes": "PID process flow diagram title block replacing source code editor."
+    },
+    {
+      "id": "desk_hard_hat",
+      "type": "desk_helmet",
+      "variant": "logo.png",
+      "surface": "White hard hat resting on desk next to keyboard",
+      "position": {
+        "x": 180,
+        "y": 790,
+        "width": 44,
+        "height": 50
+      },
+      "blend_mode": "multiply",
+      "opacity": 0.95,
+      "notes": "Branded hard hat with blue crown stripe on engineering workstation bench."
+    }
+  ]
+}

@@ -265,11 +265,6 @@ export default function CapabilitiesPage() {
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:hidden" />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
-                        {meta.environment}
-                      </span>
-                    </div>
                   </div>
 
                   {/* Operational Data Column (7 cols) */}
@@ -278,10 +273,7 @@ export default function CapabilitiesPage() {
                   }`}>
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#0CA3DC]">
-                          Discipline 0{idx + 1}
-                        </span>
-                        <span className="text-xs text-[#64727C] font-medium hidden sm:inline">
+                        <span className="text-xs text-[#64727C] font-semibold uppercase tracking-wider">
                           Technical Operations Roster
                         </span>
                       </div>
@@ -377,7 +369,7 @@ export default function CapabilitiesPage() {
       <section className="pt-8 pb-16 bg-white border-t border-[#E4EDF2]">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <h2 className="text-3xl font-bold text-[#20262B]">
-            Need to Evaluate a Plant Scope or Maintenance Contract?
+            Need to Evaluate a Plant Scope or Maintenance ?
           </h2>
           <p className="text-sm sm:text-base text-[#64727C] max-w-xl mx-auto">
             Our technical operations team reviews equipment drawings, schedules, and mobilization requirements.
@@ -387,7 +379,7 @@ export default function CapabilitiesPage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#0CA3DC] hover:bg-[#087FB5] text-white font-semibold text-sm transition-all"
             >
-              <span>Submit Scope of Work</span>
+              <span>Contact Us Today</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
