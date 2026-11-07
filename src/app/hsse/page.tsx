@@ -4,6 +4,7 @@ import Link from "next/link";
 import { siteContent } from "@/content/siteContent";
 import { CountUpNumber } from "@/components/common/CountUpNumber";
 import { Shield, CheckCircle2, Leaf, FileCheck, ArrowRight } from "lucide-react";
+import { HsseImageCarousel } from "@/components/hsse/HsseImageCarousel";
 
 export const metadata = {
   title: "HSSE & Quality Commitments — MEDDY GLOBAL SOLUTIONS LTD",
@@ -128,14 +129,7 @@ export default function HSSEPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden shadow-sm border border-[#E4EDF2]">
-                <Image
-                  src="/images/hsse.webp"
-                  alt="Safety gear and equipment"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <HsseImageCarousel />
             </div>
           </div>
         </div>
