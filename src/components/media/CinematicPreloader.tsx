@@ -147,15 +147,13 @@ export function CinematicPreloader() {
     }
   }, []);
 
-  // Direct tap anywhere on overlay triggers playback or dismisses smoothly
+  // Direct tap anywhere on overlay attempts play if paused (e.g. browser autoplay restrictions)
   const handleOverlayClick = () => {
     const video = videoRef.current;
     if (video && video.paused) {
       attemptPlay();
-    } else {
-      // Tap on running video exits smoothly
-      triggerExit();
     }
+    // Do not abort running video on accidental taps so it plays from beginning to end
   };
 
   // Initialization, Source Selection, and Constraints Check
@@ -240,8 +238,9 @@ export function CinematicPreloader() {
       setShowSkip(true);
     }, 1200);
 
-    // Absolute failsafe maximum timeout (4.5s on mobile/portrait, 7s on desktop)
-    const failsafeMs = isPortrait ? 4500 : 7000;
+    // Absolute failsafe maximum timeout: only triggers if video fails to load or stalls
+    // Both desktop (6.96s) and mobile (7.00s) videos require ample time to play from beginning to end
+    const failsafeMs = 9500;
     exitTimerRef.current = setTimeout(() => {
       triggerExit();
     }, failsafeMs);
@@ -294,7 +293,7 @@ export function CinematicPreloader() {
           onEnded={triggerExit}
           onTimeUpdate={() => {
             const video = videoRef.current;
-            if (video && video.duration > 0 && video.currentTime >= video.duration - 0.25) {
+            if (video && video.duration > 0 && video.currentTime >= video.duration - 0.05) {
               triggerExit();
             }
           }}

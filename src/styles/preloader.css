@@ -140,7 +140,7 @@ body.preloader-scroll-locked {
 
 /* Mobile & Portrait Screen Optimization:
    Ensures the brand name below the icon is 100% visible, centered,
-   and never cropped during playback or zoom exit */
+   and executes a dynamic cinematic zoom in after the intro finishes playing */
 @media (max-width: 768px), (orientation: portrait) {
   .preloader-video {
     object-fit: contain !important;
@@ -153,9 +153,16 @@ body.preloader-scroll-locked {
     background-position: center center;
   }
 
+  .preloader-video-container {
+    transform-origin: 50% 45%;
+  }
+
   .preloader-exiting .preloader-video-container {
-    transform: scale(1.05) !important;
+    transform: scale(1.28) !important;
     opacity: 0;
-    filter: blur(8px);
+    filter: blur(10px);
+    transition: transform 900ms var(--ease-preloader-exit),
+                opacity 900ms var(--ease-preloader-exit),
+                filter 900ms var(--ease-preloader-exit);
   }
 }

@@ -104,9 +104,9 @@ export function Hero() {
     };
   }, [prefersReducedMotion]);
 
-  // Main 60fps Scrubbed Render Loop (Active on desktop only)
+  // Main 60fps Scrubbed Render Loop (Active on desktop and mobile)
   const renderFrame = useCallback(() => {
-    if (prefersReducedMotion || isMobile || !isIntroArmed) return;
+    if (prefersReducedMotion || !isIntroArmed) return;
 
     // Smooth lerp for scrubbed lag (~0.6s smooth momentum)
     const pDiff = targetPRef.current - currentPRef.current;
@@ -224,9 +224,9 @@ export function Hero() {
     }
   }, [isMobile, prefersReducedMotion, isIntroArmed]);
 
-  // Scroll Listener calculating progress p (desktop pinned track only)
+  // Scroll Listener calculating progress p
   useEffect(() => {
-    if (prefersReducedMotion || isMobile || !isIntroArmed) return;
+    if (prefersReducedMotion || !isIntroArmed) return;
 
     const handleScroll = () => {
       if (!trackRef.current) return;
@@ -253,9 +253,10 @@ export function Hero() {
     };
   }, [prefersReducedMotion, isIntroArmed, renderFrame]);
 
-  // Track height based on device pinned distance (desktop only pins to prevent mobile scroll trap)
-  const isPinnedHero = !prefersReducedMotion && !isMobile;
-  const trackHeight = isPinnedHero ? `calc(100vh + ${HERO_PIN_DISTANCE_DESKTOP_VH}vh)` : "auto";
+  // Track height based on device pinned distance (cinematic scrubbed zoom on both mobile and desktop)
+  const isPinnedHero = !prefersReducedMotion;
+  const extraVh = isMobile ? HERO_PIN_DISTANCE_MOBILE_VH : HERO_PIN_DISTANCE_DESKTOP_VH;
+  const trackHeight = isPinnedHero ? `calc(100vh + ${extraVh}vh)` : "auto";
 
   return (
     <div
@@ -263,7 +264,7 @@ export function Hero() {
       className="relative w-full"
       style={{ height: trackHeight }}
     >
-      {/* Pinned Sticky Hero Frame on Desktop; Natural Responsive Viewport Frame on Mobile */}
+      {/* Pinned Sticky Hero Frame with Scrubbed Cinematic Zoom */}
       <section
         className={`${
           isPinnedHero ? "sticky top-0 h-[100dvh]" : "relative"
