@@ -334,9 +334,9 @@ export function Hero() {
             ===================================================================== */}
         <div
           ref={contentRef}
-          className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center py-6 sm:py-8 md:py-10"
+          className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 w-full flex-1 flex flex-col justify-start pt-4 sm:pt-6 md:pt-10 lg:pt-14 pb-4 sm:pb-6 md:pb-8"
         >
-          <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl space-y-3 sm:space-y-4 md:space-y-5">
+          <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl">
             {/* Bold Headline with Primary EPICM Header and Tagline Highlight */}
             <h1
               ref={headlineRef}
@@ -344,28 +344,28 @@ export function Hero() {
                 isIntroRunning ? "page-hero-stagger-title" : ""
               }`}
             >
-              <span className="block text-lg sm:text-2xl md:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-bold text-white/95 leading-[1.25]">
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-bold text-white/95 leading-[1.28] tracking-tight">
                 Engineering, Procurement, Installation, Commissioning &amp; Management
               </span>
-              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-[2.65rem] xl:text-[3rem] font-extrabold text-[#0EA5E0] leading-[1.18] mt-1.5 sm:mt-2.5">
+              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold text-[#0EA5E0] leading-[1.2] tracking-tight mt-3 sm:mt-4 md:mt-5">
                 Engineering Excellence. Integrated Solutions. Operational Success.
               </span>
             </h1>
 
-            {/* Supporting Paragraph */}
+            {/* Supporting Paragraph with Professional Spacing & Line Height */}
             <p
               ref={paragraphRef}
-              className={`text-xs sm:text-sm md:text-base lg:text-lg text-white/85 font-normal leading-relaxed max-w-xl lg:max-w-3xl transition-transform ${
+              className={`mt-5 sm:mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/85 font-normal leading-[1.68] max-w-xl lg:max-w-3xl transition-transform ${
                 isIntroRunning ? "page-hero-stagger-description" : ""
               }`}
             >
               {siteContent.hero.paragraph}
             </p>
 
-            {/* Action Buttons: Filled Pill & Ghost Pill */}
+            {/* Action Buttons: Positioned lower down with generous breathing space */}
             <div
               ref={buttonsRef}
-              className={`pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4 transition-transform ${
+              className={`mt-6 sm:mt-8 md:mt-10 flex flex-wrap items-center gap-3.5 sm:gap-4 transition-transform ${
                 isIntroRunning ? "page-hero-stagger-actions" : ""
               }`}
             >
