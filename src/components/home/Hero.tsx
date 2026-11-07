@@ -336,23 +336,26 @@ export function Hero() {
           ref={contentRef}
           className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center py-6 sm:py-8 md:py-10"
         >
-          <div className="max-w-2xl lg:max-w-3xl space-y-4 md:space-y-5">
-            {/* Bold Headline with "Technical Service" highlighted in brand light blue */}
+          <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl space-y-3 sm:space-y-4 md:space-y-5">
+            {/* Bold Headline with Primary EPICM Header and Tagline Highlight */}
             <h1
               ref={headlineRef}
-              className={`text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] xl:text-[3.75rem] font-extrabold text-white leading-[1.1] tracking-tight transition-transform outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ${
+              className={`font-extrabold text-white tracking-tight transition-transform outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ${
                 isIntroRunning ? "page-hero-stagger-title" : ""
               }`}
             >
-              Engineering and<br />
-              <span className="text-[#0EA5E0]">Technical Service</span> for<br />
-              Industry
+              <span className="block text-lg sm:text-2xl md:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-bold text-white/95 leading-[1.25]">
+                Engineering, Procurement, Installation, Commissioning &amp; Management
+              </span>
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-[2.65rem] xl:text-[3rem] font-extrabold text-[#0EA5E0] leading-[1.18] mt-1.5 sm:mt-2.5">
+                Engineering Excellence. Integrated Solutions. Operational Success.
+              </span>
             </h1>
 
             {/* Supporting Paragraph */}
             <p
               ref={paragraphRef}
-              className={`text-sm sm:text-base md:text-lg text-white/85 font-normal leading-relaxed max-w-xl lg:max-w-2xl transition-transform ${
+              className={`text-xs sm:text-sm md:text-base lg:text-lg text-white/85 font-normal leading-relaxed max-w-xl lg:max-w-3xl transition-transform ${
                 isIntroRunning ? "page-hero-stagger-description" : ""
               }`}
             >

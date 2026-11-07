@@ -61,8 +61,8 @@ export const siteContent = {
   ],
 
   hero: {
-    headline: "Engineering and\nTechnical Service for\nIndustry",
-    paragraph: "Delivering end-to-end EPICM and Rotating Equipment Solutions for Nigeria’s Energy, Oil & Gas, and Industrial Sectors combining innovation, reliability, and safety to power your operations.",
+    headline: "Engineering, Procurement, Installation, Commissioning & Management\nEngineering Excellence. Integrated Solutions. Operational Success.",
+    paragraph: "Delivering comprehensive EPICM solutions through innovative engineering, strategic procurement, precision installation, seamless commissioning, and efficient project management for Nigeria’s Energy, Oil & Gas, and Industrial sectors.",
     primaryCta: {
       label: "Contact Us",
       href: "/contact",
@@ -80,7 +80,7 @@ export const siteContent = {
       "Marine",
       "Procurement",
     ],
-    status: "draft" as const,
+    status: "verified" as const,
   },
 
   about: {
