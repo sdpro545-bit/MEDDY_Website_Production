@@ -40,9 +40,14 @@ export function Footer() {
             <div className="pt-2 space-y-3 text-sm text-white/80">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#0CA3DC] flex-shrink-0 mt-1" />
-                <span className="leading-snug text-white/70">
-                  Head Office & Operational Base, Nigeria
-                </span>
+                <a
+                  href={siteContent.company.address.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-snug text-white/70 hover:text-[#0CA3DC] transition-colors"
+                >
+                  5B, Olushola Agbaje Street, Off Road 13, beside Ascon Fueling, Lekki, Lagos, Nigeria
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#0CA3DC] flex-shrink-0" />
