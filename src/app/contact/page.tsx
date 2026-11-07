@@ -7,7 +7,7 @@ import { MapPin, Mail, ArrowUpRight, ShieldCheck, Clock, Phone, MessageCircle } 
 export const metadata = {
   title: "Contact Us — MEDDY GLOBAL SOLUTIONS LTD",
   description:
-    "Get in touch with MEDDY Global Solutions Ltd for industrial maintenance contracts, engineering scopes, and technical tenders across Nigeria.",
+    "Get in touch with MEDDY Global Solutions Ltd for industrial maintenance services, engineering scopes, and technical tenders across Nigeria.",
 };
 
 export default function ContactPage() {

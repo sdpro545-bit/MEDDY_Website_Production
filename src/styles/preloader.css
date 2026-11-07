@@ -137,3 +137,25 @@ body.preloader-scroll-locked {
     transition: opacity 400ms ease !important;
   }
 }
+
+/* Mobile & Portrait Screen Optimization:
+   Ensures the brand name below the icon is 100% visible, centered,
+   and never cropped during playback or zoom exit */
+@media (max-width: 768px), (orientation: portrait) {
+  .preloader-video {
+    object-fit: contain !important;
+    object-position: center center;
+  }
+
+  .preloader-last-frame {
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .preloader-exiting .preloader-video-container {
+    transform: scale(1.05) !important;
+    opacity: 0;
+    filter: blur(8px);
+  }
+}

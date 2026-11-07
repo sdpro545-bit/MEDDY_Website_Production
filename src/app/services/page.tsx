@@ -44,7 +44,7 @@ export default function ServicesPage() {
             Industrial Engineering & Technical Services
           </h1>
           <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-            Coordinated maintenance contracts, fabrication, rotating equipment support, and specialized procurement delivered to exacting technical standards.
+            Coordinated maintenance services, fabrication, rotating equipment support, and specialized procurement delivered to exacting technical standards.
           </p>
         </div>
       </section>

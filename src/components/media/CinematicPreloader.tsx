@@ -100,6 +100,8 @@ export function CinematicPreloader() {
     // Hold final frame momentarily so the logo breathes
     setTimeout(() => {
       setIsExiting(true);
+      // Immediately remove scroll lock so user touches are never blocked during exit dissolve
+      document.body.classList.remove("preloader-scroll-locked");
 
       // Signal hero that intro exit is starting so hero zoom/reveal initializes
       window.dispatchEvent(new CustomEvent("meddy-hero-start"));
@@ -145,11 +147,14 @@ export function CinematicPreloader() {
     }
   }, []);
 
-  // Direct tap anywhere on overlay triggers playback
+  // Direct tap anywhere on overlay triggers playback or dismisses smoothly
   const handleOverlayClick = () => {
     const video = videoRef.current;
     if (video && video.paused) {
       attemptPlay();
+    } else {
+      // Tap on running video exits smoothly
+      triggerExit();
     }
   };
 
@@ -230,15 +235,16 @@ export function CinematicPreloader() {
     window.addEventListener("resize", handleOrientationOrResize, { passive: true });
     window.addEventListener("orientationchange", handleOrientationOrResize, { passive: true });
 
-    // Show Skip button after 1.5 seconds
+    // Show Skip button after 1.2 seconds
     const skipTimer = setTimeout(() => {
       setShowSkip(true);
-    }, 1500);
+    }, 1200);
 
-    // Absolute failsafe maximum timeout: 9 seconds
+    // Absolute failsafe maximum timeout (4.5s on mobile/portrait, 7s on desktop)
+    const failsafeMs = isPortrait ? 4500 : 7000;
     exitTimerRef.current = setTimeout(() => {
       triggerExit();
-    }, 9000);
+    }, failsafeMs);
 
     // Keyboard controls
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -249,6 +255,7 @@ export function CinematicPreloader() {
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
+      document.body.classList.remove("preloader-scroll-locked");
       clearTimeout(skipTimer);
       if (exitTimerRef.current) clearTimeout(exitTimerRef.current);
       window.removeEventListener("keydown", handleKeyDown);

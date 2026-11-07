@@ -104,9 +104,9 @@ export function Hero() {
     };
   }, [prefersReducedMotion]);
 
-  // Main 60fps Scrubbed Render Loop
+  // Main 60fps Scrubbed Render Loop (Active on desktop only)
   const renderFrame = useCallback(() => {
-    if (prefersReducedMotion || !isIntroArmed) return;
+    if (prefersReducedMotion || isMobile || !isIntroArmed) return;
 
     // Smooth lerp for scrubbed lag (~0.6s smooth momentum)
     const pDiff = targetPRef.current - currentPRef.current;
@@ -224,9 +224,9 @@ export function Hero() {
     }
   }, [isMobile, prefersReducedMotion, isIntroArmed]);
 
-  // Scroll Listener calculating progress p
+  // Scroll Listener calculating progress p (desktop pinned track only)
   useEffect(() => {
-    if (prefersReducedMotion || !isIntroArmed) return;
+    if (prefersReducedMotion || isMobile || !isIntroArmed) return;
 
     const handleScroll = () => {
       if (!trackRef.current) return;
@@ -253,11 +253,9 @@ export function Hero() {
     };
   }, [prefersReducedMotion, isIntroArmed, renderFrame]);
 
-  // Track height based on device pinned distance
-  const extraVh = isMobile
-    ? HERO_PIN_DISTANCE_MOBILE_VH
-    : HERO_PIN_DISTANCE_DESKTOP_VH;
-  const trackHeight = prefersReducedMotion ? "auto" : `calc(100vh + ${extraVh}vh)`;
+  // Track height based on device pinned distance (desktop only pins to prevent mobile scroll trap)
+  const isPinnedHero = !prefersReducedMotion && !isMobile;
+  const trackHeight = isPinnedHero ? `calc(100vh + ${HERO_PIN_DISTANCE_DESKTOP_VH}vh)` : "auto";
 
   return (
     <div
@@ -265,11 +263,11 @@ export function Hero() {
       className="relative w-full"
       style={{ height: trackHeight }}
     >
-      {/* Pinned Sticky Hero Frame */}
+      {/* Pinned Sticky Hero Frame on Desktop; Natural Responsive Viewport Frame on Mobile */}
       <section
         className={`${
-          prefersReducedMotion ? "relative min-h-[92vh]" : "sticky top-0 h-screen min-h-[92vh]"
-        } w-full flex flex-col justify-between overflow-hidden bg-[#06121F] pt-20 md:pt-24 select-none`}
+          isPinnedHero ? "sticky top-0 h-[100dvh]" : "relative"
+        } min-h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-[#06121F] pt-16 md:pt-20 lg:pt-24 select-none`}
         aria-label="Homepage Hero Overview"
       >
         {/* =====================================================================
@@ -335,7 +333,7 @@ export function Hero() {
             ===================================================================== */}
         <div
           ref={contentRef}
-          className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-4 md:pt-6 lg:pt-8 pb-4"
+          className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center py-6 sm:py-8 md:py-10"
         >
           <div className="max-w-2xl lg:max-w-3xl space-y-4 md:space-y-5">
             {/* Bold Headline with "Technical Service" highlighted in brand light blue */}

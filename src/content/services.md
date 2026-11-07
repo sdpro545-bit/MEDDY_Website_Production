@@ -3,7 +3,7 @@ Status: `draft` (CLIENT REVIEW PENDING)
 
 ## Core Services
 
-### Global Maintenance Contracts
+### Global Maintenance Service
 - **Slug:** `global-maintenance-contracts`
 - **Summary:** Planned and responsive maintenance for plant and rotating equipment under a single agreement.
 - **Capabilities:**

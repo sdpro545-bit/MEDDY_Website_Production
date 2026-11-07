@@ -118,7 +118,7 @@ export const siteContent = {
       {
         id: "global-maintenance-contracts",
         slug: "global-maintenance-contracts",
-        title: "Global Maintenance Contracts",
+        title: "Global Maintenance Service",
         category: "core",
         summary: "Planned and responsive maintenance for plant and rotating equipment under a single agreement.",
         capabilities: [
@@ -395,7 +395,7 @@ export const siteContent = {
 
   ctaBand: {
     heading: "Ready to Discuss Your Engineering Requirements?",
-    paragraph: "Contact our engineering team to discuss maintenance contracts, fabrication scopes, or equipment support.",
+    paragraph: "Contact our engineering team to discuss maintenance services, fabrication scopes, or equipment support.",
     primaryAction: {
       label: "Contact Us",
       href: "/contact",
