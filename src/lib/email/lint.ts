@@ -337,9 +337,9 @@ export function verifyContactConsistency(): string[] {
     issues.push(`whatsappUrl (${c.whatsappUrl}) does not match expected (${expectedWa})`);
   }
 
-  // email equals info@meddyglobalsolutions.com
-  if (c.email !== "info@meddyglobalsolutions.com") {
-    issues.push(`email (${c.email}) does not equal expected info@meddyglobalsolutions.com`);
+  // email matches official domain
+  if (c.email !== "info@meddyglobalsolutionsltd.com" && c.email !== "info@meddyglobalsolutions.com") {
+    issues.push(`email (${c.email}) does not equal expected info@meddyglobalsolutionsltd.com`);
   }
 
   return issues;

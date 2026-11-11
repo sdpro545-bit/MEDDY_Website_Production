@@ -5,7 +5,7 @@
  * Preserves exact wording, punctuation, and intent without altering owner copy.
  */
 
-import { EMAIL_FONTS, EMAIL_PALETTE } from "./tokens.ts";
+import { EMAIL_FONTS, EMAIL_PALETTE, EMAIL_CONTACT } from "./tokens.ts";
 import { escapeHtml, escapeAttr, safeUrl, stripCRLF } from "./escape.ts";
 import { renderEmailLayout } from "./layout.ts";
 import {
@@ -284,11 +284,11 @@ ${header.senderName ? `${header.senderName}\n` : ""}${header.senderTitle ? `${he
 
 --------------------------------------------------
 GET IN TOUCH
-- Visit us: https://www.meddyglobalsolutions.com
-- Call us: +234 803 377 4429
-- WhatsApp: https://wa.me/2348033774429
-- Email: info@meddyglobalsolutions.com
-- Office: 5B, Olushola Agbaje Street, Off Road 13, beside Ascon Fueling, Lekki, Lagos, Nigeria
+- Visit us: ${EMAIL_CONTACT.siteUrl}
+- Call us: ${EMAIL_CONTACT.phone} (${EMAIL_CONTACT.phoneRaw})
+- WhatsApp: ${EMAIL_CONTACT.whatsappUrl}
+- Email: ${EMAIL_CONTACT.email}
+- Office: ${EMAIL_CONTACT.addressFormatted}
 `;
 
   return {

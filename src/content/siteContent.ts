@@ -45,7 +45,7 @@ export const siteContent = {
       formatted: "5B, Olushola Agbaje Street, Off Road 13, beside Ascon Fueling, Lekki, Lagos, Nigeria",
       googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=5B+Olushola+Agbaje+Street+Lekki+Lagos+Nigeria",
     },
-    email: "info@meddyglobalsolutions.com",
+    email: "info@meddyglobalsolutionsltd.com",
     routingEmail: "mglobalsolutions185@gmail.com",
     phone: "+234 803 377 4429",
     phoneRaw: "+2348033774429",
@@ -400,7 +400,7 @@ export const siteContent = {
       label: "Contact Us",
       href: "/contact",
     },
-    directEmail: "info@meddyglobalsolutions.com",
+    directEmail: "info@meddyglobalsolutionsltd.com",
   },
 
   footer: {

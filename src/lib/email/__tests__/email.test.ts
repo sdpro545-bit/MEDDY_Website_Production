@@ -34,8 +34,8 @@ test("Email Security: stripCRLF prevents header injection attacks", () => {
 });
 
 test("Email Security: safeUrl allows https, mailto, tel, rejects javascript and data schemes", () => {
-  assert.equal(safeUrl("https://meddyglobalsolutions.com"), "https://meddyglobalsolutions.com/");
-  assert.equal(safeUrl("mailto:info@meddyglobalsolutions.com"), "mailto:info@meddyglobalsolutions.com");
+  assert.equal(safeUrl("https://meddyglobalsolutionsltd.com"), "https://meddyglobalsolutionsltd.com/");
+  assert.equal(safeUrl("mailto:info@meddyglobalsolutionsltd.com"), "mailto:info@meddyglobalsolutionsltd.com");
   assert.equal(safeUrl("tel:+2348033774429"), "tel:+2348033774429");
   assert.equal(safeUrl("javascript:alert(1)"), null);
   assert.equal(safeUrl("data:text/html,<script>alert(1)</script>"), null);
@@ -47,7 +47,7 @@ test("Email Tokens: Contact consistency audit passes completely", () => {
   assert.deepEqual(issues, []);
   assert.equal(EMAIL_CONTACT.phone, "+234 803 377 4429");
   assert.equal(EMAIL_CONTACT.phoneRaw, "+2348033774429");
-  assert.equal(EMAIL_CONTACT.email, "info@meddyglobalsolutions.com");
+  assert.equal(EMAIL_CONTACT.email, "info@meddyglobalsolutionsltd.com");
   assert.equal(EMAIL_CONTACT.rcNumber, "7425121");
   assert.equal(EMAIL_CONTACT.address.includes("Lekki"), true);
 });
@@ -133,7 +133,7 @@ test("Template T4: Owner Compose Message renders with clean typography and butto
       senderTitle: "MEDDY GLOBAL SOLUTIONS LTD",
       cta: {
         label: "Confirm Schedule",
-        url: "https://www.meddyglobalsolutions.com/contact",
+        url: "https://www.meddyglobalsolutionsltd.com/contact",
       },
     },
     body: `We confirm that our rotating equipment specialist team has been cleared for mobilization.\n\nArrival is scheduled for Monday at 08:00 WAT.`,
@@ -151,7 +151,7 @@ test("Template T4: Owner Compose Message renders with clean typography and butto
 test("Deliverability Lint: Catches disallowed executable tags (<script>)", () => {
   const badEmail = {
     subject: "Test Subject With Clean Name",
-    html: `<!DOCTYPE html><html><body><script>alert('bad')</script><img alt="MEDDY GLOBAL SOLUTIONS LTD" src="https://meddyglobalsolutions.com/email/meddy-logo.png" /></body></html>`,
+    html: `<!DOCTYPE html><html><body><script>alert('bad')</script><img alt="MEDDY GLOBAL SOLUTIONS LTD" src="https://meddyglobalsolutionsltd.com/email/meddy-logo.png" /></body></html>`,
     text: `Plain text with ${EMAIL_CONTACT.email} and ${EMAIL_CONTACT.phone}`,
   };
 

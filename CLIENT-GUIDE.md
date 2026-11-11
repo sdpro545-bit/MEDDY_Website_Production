@@ -10,7 +10,7 @@ Welcome to your official branded email and document delivery suite. This system 
    - When a prospective client submits an inquiry through your website contact form, they instantly receive a formal acknowledgment confirming that MEDDY has received their request and that your engineering operations team is reviewing it.
 
 2. **Internal Management Alerts (Template T2)**:
-   - When a website inquiry arrives, a structured notification is instantly dispatched to your management inbox (`info@meddyglobalsolutions.com` and `mglobalsolutions185@gmail.com`) containing all the client's information, category, and message, with a 1-click button to reply to them directly.
+   - When a website inquiry arrives, a structured notification is instantly dispatched to your management inbox (`info@meddyglobalsolutionsltd.com` and `mglobalsolutions185@gmail.com`) containing all the client's information, category, and message, with a 1-click button to reply to them directly.
 
 3. **Client Document Delivery (Template T3)**:
    - A formal letterhead cover email for sending official quotations, technical proposals, field inspection reports, and corporate letters to clients.
@@ -27,7 +27,7 @@ Welcome to your official branded email and document delivery suite. This system 
 ## 2. How to Use the Executive Compose Portal
 
 ### Step 1: Logging In
-1. Visit: `https://www.meddyglobalsolutions.com/admin/login`
+1. Visit: `https://www.meddyglobalsolutionsltd.com/admin/login`
 2. Enter your admin username and secure password.
 3. Click **Sign In**.
 

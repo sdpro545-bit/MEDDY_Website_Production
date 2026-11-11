@@ -80,7 +80,7 @@ async function main() {
       senderTitle: "Managing Director",
       cta: {
         label: "Confirm Inspection Date",
-        url: "https://www.meddyglobalsolutions.com/contact",
+        url: "https://www.meddyglobalsolutionsltd.com/contact",
       },
     },
     body: `We have finalized the technical team mobilization roster for next week's site inspection at your Eket operations yard.
@@ -175,7 +175,7 @@ javascript:alert(document.cookie)
       senderTitle: "Managing Director",
       cta: {
         label: "View Scope Verification Portal",
-        url: "https://www.meddyglobalsolutions.com/capabilities",
+        url: "https://www.meddyglobalsolutionsltd.com/capabilities",
       },
     },
     body: `We are pleased to submit the finalized technical execution schedule for the upcoming subsea pipeline inspection.
@@ -193,7 +193,7 @@ The inspection campaign comprises three synchronized phases:
 2. Phase 2 Marine Vessel Stationing: 21 business days
 3. Phase 3 Engineering Report Submission: 30 business days
 
-For real-time operational milestones, please access our verified portal at https://www.meddyglobalsolutions.com or review the attached technical dossier.
+For real-time operational milestones, please access our verified portal at https://www.meddyglobalsolutionsltd.com or review the attached technical dossier.
 
 We remain dedicated to delivering **Engineering Excellence**, **Integrated Solutions**, and **Operational Success**.`,
   });

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://www.meddyglobalsolutions.com/sitemap.xml",
+    sitemap: "https://www.meddyglobalsolutionsltd.com/sitemap.xml",
   };
 }
 

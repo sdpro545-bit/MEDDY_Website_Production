@@ -24,13 +24,14 @@ The following items are missing from initial materials and require client review
    - Official ISO or industry accreditations / membership certificates (none currently published).
 
 6. **Contact Channels & Mailbox Configuration:**
-   - Confirmation that `info@meddyglobalsolutions.com` is active and receiving mail via Namecheap Private Email.
+   - Official registered production domain purchased: **`meddyglobalsolutionsltd.com`**.
+   - Primary company email: `info@meddyglobalsolutionsltd.com` (routing to `mglobalsolutions185@gmail.com`).
    - Form delivery API key (Resend) configured in production environment variables (`RESEND_API_KEY`, `CONTACT_RECIPIENT`).
    - Office hours (if client wishes to display them).
    - **Directive Status Update (Superseding Website Prompt 0A.3):** The company owner has formally approved display of telephone and WhatsApp channels. Official phone (`+234 803 377 4429`) and WhatsApp (`https://wa.me/2348033774429`) are active on the website and in the official branded email system.
 
 7. **Domain & Digital Assets:**
-   - Preferred production domain name (for canonical tags, SSL, and sitemap generation).
+   - **Verified Production Domain:** `meddyglobalsolutionsltd.com` (with `www.meddyglobalsolutionsltd.com`).
    - Official social-media channel URLs (if any exist).
    - High-resolution real site photography to replace AI-generated documentary photography in `/public/images/`.
 

@@ -87,7 +87,7 @@ async function main() {
 
   const result = await sendEmail({
     to,
-    bcc: [process.env.EMAIL_ARCHIVE_BCC || "info@meddyglobalsolutions.com"],
+    bcc: [process.env.EMAIL_ARCHIVE_BCC || "info@meddyglobalsolutionsltd.com"],
     subject: rendered.subject,
     html: rendered.html,
     text: rendered.text,

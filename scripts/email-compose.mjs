@@ -49,7 +49,7 @@ async function main() {
   const lint = lintEmail(rendered, true);
 
   console.log("\n=== MEDDY EMAIL COMPOSE SUMMARY ===");
-  console.log(`From:    ${process.env.EMAIL_FROM || "MEDDY GLOBAL SOLUTIONS <info@meddyglobalsolutions.com>"}`);
+  console.log(`From:    ${process.env.EMAIL_FROM || "MEDDY GLOBAL SOLUTIONS <info@meddyglobalsolutionsltd.com>"}`);
   console.log(`To:      ${input.header.toName ? `${input.header.toName} <${input.header.to}>` : input.header.to}`);
   if (input.header.cc) console.log(`CC:      ${input.header.cc.join(", ")}`);
   console.log(`Subject: ${rendered.subject}`);
@@ -92,7 +92,7 @@ async function main() {
   const result = await sendEmail({
     to: input.header.to,
     cc: input.header.cc,
-    bcc: [process.env.EMAIL_ARCHIVE_BCC || "info@meddyglobalsolutions.com"],
+    bcc: [process.env.EMAIL_ARCHIVE_BCC || "info@meddyglobalsolutionsltd.com"],
     subject: rendered.subject,
     html: rendered.html,
     text: rendered.text,

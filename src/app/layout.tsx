@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.meddyglobalsolutions.com"),
+  metadataBase: new URL("https://www.meddyglobalsolutionsltd.com"),
   title: "MEDDY GLOBAL SOLUTIONS LTD — Industrial Engineering & Technical Services",
   description:
     "Engineering, maintenance, fabrication, procurement and technical staffing delivered across Nigeria.",

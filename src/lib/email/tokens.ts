@@ -62,7 +62,7 @@ export interface EmailContactDetails {
  */
 function createEmailContact(): EmailContactDetails {
   const comp = siteContent.company;
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.meddyglobalsolutions.com").replace(/\/$/, "");
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.meddyglobalsolutionsltd.com").replace(/\/$/, "");
 
   return {
     legalName: comp.legalName,
@@ -83,7 +83,7 @@ export const EMAIL_CONTACT: EmailContactDetails = Object.freeze(createEmailConta
 export const EMAIL_ASSET_BASE_URL = (
   process.env.EMAIL_ASSET_BASE_URL ||
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.meddyglobalsolutions.com"
+  "https://www.meddyglobalsolutionsltd.com"
 ).replace(/\/$/, "");
 
 export const EMAIL_LOGO_URL = `${EMAIL_ASSET_BASE_URL}/email/meddy-logo.png`;
