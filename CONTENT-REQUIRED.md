@@ -24,10 +24,10 @@ The following items are missing from initial materials and require client review
    - Official ISO or industry accreditations / membership certificates (none currently published).
 
 6. **Contact Channels & Mailbox Configuration:**
-   - Confirmation that `info@meddyglobalsolutions.com` is active and receiving mail.
-   - Form delivery API key (e.g. Resend, SendGrid, or SMTP) configured in production environment variables (`CONTACT_RECIPIENT`, `RESEND_API_KEY`).
+   - Confirmation that `info@meddyglobalsolutions.com` is active and receiving mail via Namecheap Private Email.
+   - Form delivery API key (Resend) configured in production environment variables (`RESEND_API_KEY`, `CONTACT_RECIPIENT`).
    - Office hours (if client wishes to display them).
-   - Note: Phone and WhatsApp numbers have been deliberately omitted per client instructions.
+   - **Directive Status Update (Superseding Website Prompt 0A.3):** The company owner has formally approved display of telephone and WhatsApp channels. Official phone (`+234 803 377 4429`) and WhatsApp (`https://wa.me/2348033774429`) are active on the website and in the official branded email system.
 
 7. **Domain & Digital Assets:**
    - Preferred production domain name (for canonical tags, SSL, and sitemap generation).

@@ -1,0 +1,27 @@
+MEDDY GLOBAL SOLUTIONS LTD — INTERNAL NOTIFICATION
+[Web Enquiry] General Industrial Engineering Enquiry | <script>alert("xss-nam...
+
+A prospective client has submitted an enquiry through the official website contact form.
+
+WEB ENQUIRY SUMMARY
+- Full Name: <script>alert("xss-name")</script>"><img src=x onerror=alert(1)>
+- Client Email: hacker@hostile.com"><script>alert(1)</script>
+- Category: General Industrial Engineering Enquiry
+- Received: 11 Nov 2026, 18:03 WAT
+- Reference Code: REF<script>"alert(1)"</script>
+
+ENQUIRY MESSAGE DETAILS:
+Test payload verification:
+<script>alert("xss-body")</script>
+</td></tr></table><div style="background:red;font-size:50px;">DEFACED</div>
+javascript:alert(document.cookie)
+"><img src=x onerror=alert(document.domain)>
+`-- DROP TABLE users; --
+
+Reply to client: mailto:hacker%40hostile.com%22%3E%3Cscript%3Ealert(1)%3C%2Fscript%3E?subject=RE%3A%20%5BWeb%20Enquiry%5D%20General%20Industrial%20Engineering%20Enquiry%20-%20MEDDY%20GLOBAL%20SOLUTIONS%20LTD
+
+--------------------------------------------------------------------------------
+CONFIDENTIAL: Internal notification dispatched to info@meddyglobalsolutions.com for MEDDY GLOBAL SOLUTIONS LTD personnel only.
+MEDDY GLOBAL SOLUTIONS LTD · RC: 7425121
+Head Office: 5B, Olushola Agbaje Street, Off Road 13, beside Ascon Fueling, Lekki, Lagos, Nigeria
+Direct: +234 803 377 4429 · Inquiries: info@meddyglobalsolutions.com · Web: https://www.meddyglobalsolutions.com

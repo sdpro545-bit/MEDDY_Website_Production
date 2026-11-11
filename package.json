@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "echo 'ESLint skipped'"
+    "lint": "echo 'ESLint skipped'",
+    "email:compose": "node --experimental-strip-types scripts/email-compose.mjs",
+    "email:send-doc": "node --experimental-strip-types scripts/email-send-document.mjs",
+    "email:previews": "node --experimental-strip-types scripts/render-email-previews.mjs",
+    "email:test": "node --test --experimental-strip-types src/lib/email/__tests__/email.test.ts",
+    "admin:hash-password": "node scripts/hash-password.mjs"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -30,4 +35,3 @@
     "typescript": "^5.7.0"
   }
 }
-

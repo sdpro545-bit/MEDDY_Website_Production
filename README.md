@@ -59,10 +59,43 @@ To replace any visual slot with real company photography without touching React 
 ## 4. Content Architecture & Verified Information
 
 Site content is centralized in [`content/siteContent.ts`](content/siteContent.ts):
-- **Verified Facts:** Company legal name (`MEDDY GLOBAL SOLUTIONS LTD`), registered office address (`5B, Olushola Agbaje Street, Off Road 13, beside Ascon Fueling, Lekki, Lagos, Nigeria`), and email channel (`info@meddyglobalsolutions.com`).
-- **Deliberate Omissions (Client Directives):** No telephone numbers, no WhatsApp, no tagline, no fake client logos, no fake certifications, no unverified statistics.
+- **Verified Facts:** Company legal name (`MEDDY GLOBAL SOLUTIONS LTD`), registered office address (`5B, Olushola Agbaje Street, Off Road 13, beside Ascon Fueling, Lekki, Lagos, Nigeria`), official contact phone (`+234 803 377 4429`), WhatsApp channel (`https://wa.me/2348033774429`), and email channel (`info@meddyglobalsolutions.com`).
 - **Draft Services (Appendix A):** All 15 core and other services are marked with `status: "draft"` and can be toggled via the single switch `SHOW_DRAFT_SERVICES`.
 - **Client Action Items:** See [`CONTENT-REQUIRED.md`](CONTENT-REQUIRED.md) for outstanding items before live launch.
+
+---
+
+## 5. Official Branded Email System & Compose Portal
+
+The corporate email communication infrastructure provides typed templates, automated deliverability linting, anti-phishing safeguards, and a secure owner compose portal:
+
+### Core Templates
+- **T1: Enquiry Acknowledgement**: Automated immediate client receipt confirmation.
+- **T2: Internal Enquiry Notification**: Dispatched to `info@meddyglobalsolutions.com` and `mglobalsolutions185@gmail.com` with 1-click reply mailto.
+- **T3: Client Document Delivery**: Formal cover letterhead for proposals, quotations, and reports with dedicated Security & Banking Advisory.
+- **T4: Owner Custom Message**: Executive correspondence crafted via the Owner Compose Portal.
+
+### Executive Tools & CLI Commands
+```bash
+# Render all email previews and run deliverability lint audit
+npm run email:previews
+
+# Execute email unit test suite
+npm run email:test
+
+# Generate secure password hash for admin portal
+npm run admin:hash-password "YourPassword"
+
+# Send document cover email via CLI
+npm run email:send-doc -- --to="client@corp.ng" --name="Client Name" --doc="Quotation" --project="Refinery Overhaul"
+```
+
+### Complete Documentation Guides
+- **[`EMAIL-SETUP.md`](EMAIL-SETUP.md)**: Namecheap DNS configuration (DKIM, SPF, DMARC) and Resend integration.
+- **[`ADMIN-HANDOVER.md`](ADMIN-HANDOVER.md)**: Security architecture, credential generation, and emergency kill-switch.
+- **[`CLIENT-GUIDE.md`](CLIENT-GUIDE.md)**: Non-technical executive guide for `/admin/compose` and webmail signature installation.
+- **[`email-signature/`](email-signature/)**: Copy-and-paste executive HTML webmail signature for Outlook, Gmail, and Titan.
+- **[`.env.example`](.env.example)**: Environment variable template with security requirements.
 
 ---
 
